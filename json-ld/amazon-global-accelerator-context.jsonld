@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "ga": "https://docs.aws.amazon.com/global-accelerator/latest/api/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Accelerator": {
+      "@id": "ga:Accelerator",
+      "@context": {
+        "acceleratorArn": "ga:acceleratorArn",
+        "name": "schema:name",
+        "ipAddressType": "ga:ipAddressType",
+        "enabled": "ga:enabled",
+        "dnsName": "ga:dnsName",
+        "status": "ga:status",
+        "ipSets": {
+          "@id": "ga:ipSets",
+          "@container": "@set"
+        },
+        "createdTime": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "lastModifiedTime": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Listener": {
+      "@id": "ga:Listener",
+      "@context": {
+        "listenerArn": "ga:listenerArn",
+        "portRanges": {
+          "@id": "ga:portRanges",
+          "@container": "@set"
+        },
+        "protocol": "ga:protocol",
+        "clientAffinity": "ga:clientAffinity"
+      }
+    }
+  }
+}

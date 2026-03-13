@@ -1,0 +1,80 @@
+openapi: 3.1.0
+info:
+  title: Amazon Global Accelerator API
+  description: >-
+    Amazon Global Accelerator is a networking service that improves the
+    performance and availability of your applications with local or global
+    users. This API enables you to create and manage accelerators, configure
+    listeners and endpoint groups, and optimize traffic routing across AWS
+    Regions using the AWS global network.
+  version: '2018-08-08'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/contact-us/
+  termsOfService: https://aws.amazon.com/service-terms/
+externalDocs:
+  description: Amazon Global Accelerator API Reference
+  url: https://docs.aws.amazon.com/global-accelerator/latest/api/Welcome.html
+servers:
+  - url: https://globalaccelerator.amazonaws.com
+    description: Amazon Global Accelerator Endpoint
+tags:
+  - name: Accelerators
+    description: Operations for creating and managing accelerators
+  - name: Listeners
+    description: Operations for managing listeners on accelerators
+  - name: Endpoint Groups
+    description: Operations for managing endpoint groups within listeners
+  - name: Custom Routing
+    description: Operations for custom routing accelerators
+paths:
+  /:
+    post:
+      operationId: CreateAccelerator
+      summary: Create a new accelerator
+      description: Creates an accelerator for improved application performance.
+      tags:
+        - Accelerators
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Name
+                - IdempotencyToken
+              properties:
+                Name:
+                  type: string
+                  description: The name of the accelerator
+                IpAddressType:
+                  type: string
+                  enum: [IPV4, DUAL_STACK]
+                  description: The IP address type
+                IpAddresses:
+                  type: array
+                  items:
+                    type: string
+                  description: Optional static IP addresses
+                Enabled:
+                  type: boolean
+                  description: Whether the accelerator is enabled
+                IdempotencyToken:
+                  type: string
+                  description: Unique idempotency token
+                Tags:
+                  type: array
+                  items:
+                    type: object
+      responses:
+        '200':
+          description: Accelerator created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Accelerator:
+                    type: object
+                    description: The accelerator that was created
