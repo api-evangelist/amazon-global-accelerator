@@ -21,12 +21,6 @@ servers:
 tags:
   - name: Accelerators
     description: Operations for creating and managing accelerators
-  - name: Listeners
-    description: Operations for managing listeners on accelerators
-  - name: Endpoint Groups
-    description: Operations for managing endpoint groups within listeners
-  - name: Custom Routing
-    description: Operations for custom routing accelerators
 paths:
   /:
     post:
