@@ -31,7 +31,7 @@ paths:
   /:
     post:
       operationId: CreateAccelerator
-      summary: Create a new accelerator
+      summary: Amazon Global Accelerator Create a new accelerator
       description: Creates an accelerator for improved application performance.
       tags:
         - Accelerators
