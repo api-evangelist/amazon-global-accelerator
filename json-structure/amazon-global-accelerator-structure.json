@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/amazon-global-accelerator-structure.json",
+  "name": "Amazon Global Accelerator",
+  "description": "Represents an Amazon Global Accelerator with its associated configuration, state, and metadata.",
+  "type": "object",
+  "required": [
+    "acceleratorArn",
+    "name",
+    "status"
+  ],
+  "properties": {
+    "acceleratorArn": {
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the accelerator"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the accelerator"
+    },
+    "ipAddressType": {
+      "type": "string",
+      "enum": [
+        "IPV4",
+        "DUAL_STACK"
+      ],
+      "description": "The IP address type"
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Whether the accelerator is enabled"
+    },
+    "ipSets": {
+      "type": "array",
+      "description": "The static IP addresses associated with the accelerator",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ipFamily": {
+            "type": "string"
+          },
+          "ipAddresses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "dnsName": {
+      "type": "string",
+      "description": "The DNS name of the accelerator"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DEPLOYED",
+        "IN_PROGRESS"
+      ],
+      "description": "The deployment status of the accelerator"
+    },
+    "createdTime": {
+      "type": "datetime",
+      "description": "The time the accelerator was created"
+    },
+    "lastModifiedTime": {
+      "type": "datetime",
+      "description": "The time the accelerator was last modified"
+    }
+  }
+}

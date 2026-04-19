@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-custom-routing-endpoint-group-structure.json",
+  "name": "CustomRoutingEndpointGroup",
+  "description": "A complex type for the endpoint group for a custom routing accelerator. An Amazon Web Services Region can have only one endpoint group for a specific listener. ",
+  "type": "object",
+  "properties": {
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group."
+        }
+      ]
+    },
+    "EndpointGroupRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Web Services Region where the endpoint group is located."
+        }
+      ]
+    },
+    "DestinationDescriptions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingDestinationDescriptions"
+        },
+        {
+          "description": "For a custom routing accelerator, describes the port range and protocol for all endpoints (virtual private cloud subnets) in an endpoint group to accept client traffic on."
+        }
+      ]
+    },
+    "EndpointDescriptions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingEndpointDescriptions"
+        },
+        {
+          "description": "For a custom routing accelerator, describes the endpoints (virtual private cloud subnets) in an endpoint group to accept client traffic on."
+        }
+      ]
+    }
+  }
+}

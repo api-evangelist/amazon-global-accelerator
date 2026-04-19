@@ -1,0 +1,7 @@
+{
+  "EndpointId": "example-EndpointId",
+  "Weight": "example-Weight",
+  "HealthState": "example-HealthState",
+  "HealthReason": "example-HealthReason",
+  "ClientIPPreservationEnabled": "1.2.3.4"
+}

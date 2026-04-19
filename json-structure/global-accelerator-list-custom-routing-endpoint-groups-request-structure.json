@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-list-custom-routing-endpoint-groups-request-structure.json",
+  "name": "ListCustomRoutingEndpointGroupsRequest",
+  "description": "ListCustomRoutingEndpointGroupsRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "ListenerArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the listener to list endpoint groups for."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResults"
+        },
+        {
+          "description": "The number of endpoint group objects that you want to return with this call. The default value is 10."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next set of results. You receive this token from a previous call."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ListenerArn"
+  ]
+}

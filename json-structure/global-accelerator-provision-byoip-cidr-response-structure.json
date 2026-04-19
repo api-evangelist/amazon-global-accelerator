@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-provision-byoip-cidr-response-structure.json",
+  "name": "ProvisionByoipCidrResponse",
+  "description": "ProvisionByoipCidrResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "ByoipCidr": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ByoipCidr"
+        },
+        {
+          "description": "Information about the address range."
+        }
+      ]
+    }
+  }
+}

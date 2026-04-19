@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-port-override-structure.json",
+  "name": "PortOverride",
+  "description": "<p>Override specific listener ports used to route traffic to endpoints that are part of an endpoint group. For example, you can create a port override in which the listener receives user traffic on ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively, on the endpoints.</p> <p>For more information, see <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-port-override.html\"> Overriding listener ports</a> in the <i>Global Accelerator Developer Guide</i>.</p>",
+  "type": "object",
+  "properties": {
+    "ListenerPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortNumber"
+        },
+        {
+          "description": "The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on."
+        }
+      ]
+    },
+    "EndpointPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortNumber"
+        },
+        {
+          "description": "The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance."
+        }
+      ]
+    }
+  }
+}

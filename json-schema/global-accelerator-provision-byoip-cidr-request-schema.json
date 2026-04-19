@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-provision-byoip-cidr-request-schema.json",
+  "title": "ProvisionByoipCidrRequest",
+  "description": "ProvisionByoipCidrRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Cidr": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The public IPv4 address range, in CIDR notation. The most specific IP prefix that you can specify is /24. The address range cannot overlap with another address range that you've brought to this or another Region."
+        }
+      ]
+    },
+    "CidrAuthorizationContext": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CidrAuthorizationContext"
+        },
+        {
+          "description": "A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "Cidr",
+    "CidrAuthorizationContext"
+  ]
+}

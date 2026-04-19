@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-health-check-interval-seconds-structure.json",
+  "name": "HealthCheckIntervalSeconds",
+  "description": "HealthCheckIntervalSeconds schema from Amazon Global Accelerator API",
+  "type": "int32",
+  "minimum": 10,
+  "maximum": 30
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-list-custom-routing-listeners-response-schema.json",
+  "title": "ListCustomRoutingListenersResponse",
+  "description": "ListCustomRoutingListenersResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Listeners": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingListeners"
+        },
+        {
+          "description": "The list of listeners for a custom routing accelerator."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next set of results. You receive this token from a previous call."
+        }
+      ]
+    }
+  }
+}

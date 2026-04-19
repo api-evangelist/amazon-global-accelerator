@@ -1,0 +1,8 @@
+{
+  "Name": "MyAccelerator",
+  "IpAddressType": "1.2.3.4",
+  "IpAddresses": "1.2.3.4",
+  "Enabled": "example-Enabled",
+  "IdempotencyToken": "example-IdempotencyToke",
+  "Tags": "example-Tags"
+}

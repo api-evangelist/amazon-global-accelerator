@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-add-custom-routing-endpoints-response-structure.json",
+  "name": "AddCustomRoutingEndpointsResponse",
+  "description": "AddCustomRoutingEndpointsResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointDescriptions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingEndpointDescriptions"
+        },
+        {
+          "description": "The endpoint objects added to the custom routing accelerator."
+        }
+      ]
+    },
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group for the custom routing endpoint."
+        }
+      ]
+    }
+  }
+}

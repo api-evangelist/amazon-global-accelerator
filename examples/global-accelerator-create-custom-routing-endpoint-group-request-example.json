@@ -1,0 +1,6 @@
+{
+  "ListenerArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "EndpointGroupRegion": "us-east-1",
+  "DestinationConfigurations": "example-DestinationConf",
+  "IdempotencyToken": "example-IdempotencyToke"
+}

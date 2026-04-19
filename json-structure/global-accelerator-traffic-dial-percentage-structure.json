@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-traffic-dial-percentage-structure.json",
+  "name": "TrafficDialPercentage",
+  "description": "TrafficDialPercentage schema from Amazon Global Accelerator API",
+  "type": "float",
+  "minimum": 0,
+  "maximum": 100
+}

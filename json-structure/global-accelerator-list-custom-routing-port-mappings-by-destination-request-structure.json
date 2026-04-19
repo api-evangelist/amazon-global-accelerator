@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-list-custom-routing-port-mappings-by-destination-request-structure.json",
+  "name": "ListCustomRoutingPortMappingsByDestinationRequest",
+  "description": "ListCustomRoutingPortMappingsByDestinationRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The ID for the virtual private cloud (VPC) subnet."
+        }
+      ]
+    },
+    "DestinationAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The endpoint IP address in a virtual private cloud (VPC) subnet for which you want to receive back port mappings."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortMappingsMaxResults"
+        },
+        {
+          "description": "The number of destination port mappings that you want to return with this call. The default value is 10."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next set of results. You receive this token from a previous call."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointId",
+    "DestinationAddress"
+  ]
+}

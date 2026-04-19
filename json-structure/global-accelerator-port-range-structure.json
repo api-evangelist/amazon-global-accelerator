@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-port-range-structure.json",
+  "name": "PortRange",
+  "description": "A complex type for a range of ports for a listener.",
+  "type": "object",
+  "properties": {
+    "FromPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortNumber"
+        },
+        {
+          "description": "The first port in the range of ports, inclusive."
+        }
+      ]
+    },
+    "ToPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortNumber"
+        },
+        {
+          "description": "The last port in the range of ports, inclusive."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-custom-routing-protocol-structure.json",
+  "name": "CustomRoutingProtocol",
+  "description": "CustomRoutingProtocol schema from Amazon Global Accelerator API",
+  "type": "string",
+  "enum": [
+    "TCP",
+    "UDP"
+  ]
+}

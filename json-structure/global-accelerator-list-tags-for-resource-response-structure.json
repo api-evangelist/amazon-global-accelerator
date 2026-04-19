@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-list-tags-for-resource-response-structure.json",
+  "name": "ListTagsForResourceResponse",
+  "description": "ListTagsForResourceResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "description": "Root level tag for the Tags parameters."
+        }
+      ]
+    }
+  }
+}

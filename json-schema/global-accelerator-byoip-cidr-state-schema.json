@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-byoip-cidr-state-schema.json",
+  "title": "ByoipCidrState",
+  "description": "ByoipCidrState schema from Amazon Global Accelerator API",
+  "type": "string",
+  "enum": [
+    "PENDING_PROVISIONING",
+    "READY",
+    "PENDING_ADVERTISING",
+    "ADVERTISING",
+    "PENDING_WITHDRAWING",
+    "PENDING_DEPROVISIONING",
+    "DEPROVISIONED",
+    "FAILED_PROVISION",
+    "FAILED_ADVERTISING",
+    "FAILED_WITHDRAW",
+    "FAILED_DEPROVISION"
+  ]
+}

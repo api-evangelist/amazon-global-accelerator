@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-delete-accelerator-request-schema.json",
+  "title": "DeleteAcceleratorRequest",
+  "description": "DeleteAcceleratorRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "AcceleratorArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of an accelerator."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AcceleratorArn"
+  ]
+}

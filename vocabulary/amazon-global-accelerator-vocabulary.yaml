@@ -1,0 +1,120 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: Amazon Global Accelerator
+  description: Unified vocabulary for Amazon Global Accelerator networking APIs
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: amazon-global-accelerator
+      version: "2018-08-08"
+      baseUrl: https://globalaccelerator.amazonaws.com
+      status: active
+
+  resources:
+    - name: accelerators
+      description: Global Accelerator resources with static Anycast IPs
+      actions: [list, create, describe, update, delete]
+    - name: listeners
+      description: Protocol listeners attached to accelerators
+      actions: [list, create, describe, update, delete]
+    - name: endpoint-groups
+      description: Regional endpoint groups with traffic routing weights
+      actions: [list, create, describe, update, delete]
+    - name: custom-routing-accelerators
+      description: Custom routing accelerators for deterministic traffic routing
+      actions: [list, create, describe, update, delete]
+    - name: cross-account-attachments
+      description: Cross-account resource attachments for shared accelerators
+      actions: [list, create, describe, update, delete]
+
+  actions:
+    - name: list
+      httpMethod: POST
+      pattern: read
+    - name: create
+      httpMethod: POST
+      pattern: write
+    - name: describe
+      httpMethod: POST
+      pattern: read
+    - name: update
+      httpMethod: POST
+      pattern: write
+    - name: delete
+      httpMethod: POST
+      pattern: destructive
+
+  authentication:
+    schemes:
+      - type: AWS Signature Version 4
+        parameters: [AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION]
+
+  enums:
+    accelerator-status:
+      - DEPLOYED
+      - IN_PROGRESS
+    protocol:
+      - TCP
+      - UDP
+    client-affinity:
+      - NONE
+      - SOURCE_IP
+    ip-address-type:
+      - IPV4
+      - DUAL_STACK
+
+capability:
+  workflows:
+    - name: Amazon Global Accelerator Network Operations
+      file: capabilities/amazon-global-accelerator-network-operations.yaml
+      apis: [amazon-global-accelerator]
+      tools: 11
+      personas: [Network Engineer, DevOps Engineer]
+
+  personas:
+    - id: network-engineer
+      name: Network Engineer
+      description: Configures and optimizes global network traffic routing
+      workflows: [Amazon Global Accelerator Network Operations]
+    - id: devops-engineer
+      name: DevOps Engineer
+      description: Manages application infrastructure and availability
+      workflows: [Amazon Global Accelerator Network Operations]
+
+  domains:
+    - name: Traffic Routing
+      resources: [accelerators, listeners, endpoint-groups]
+    - name: Custom Routing
+      resources: [custom-routing-accelerators]
+
+  namespaces:
+    - namespace: amazon-global-accelerator
+      type: consumed
+    - namespace: global-accelerator-ops-api
+      type: rest-exposed
+      port: 8081
+    - namespace: global-accelerator-ops-mcp
+      type: mcp-exposed
+      port: 9091
+
+  binds:
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
+    - AWS_REGION
+
+crossReference:
+  - resource: accelerators
+    operations: [ListAccelerators, CreateAccelerator, DescribeAccelerator, UpdateAccelerator, DeleteAccelerator]
+    workflows: [Amazon Global Accelerator Network Operations]
+    personas: [Network Engineer, DevOps Engineer]
+  - resource: listeners
+    operations: [ListListeners, CreateListener, UpdateListener, DeleteListener]
+    workflows: [Amazon Global Accelerator Network Operations]
+    personas: [Network Engineer]
+  - resource: endpoint-groups
+    operations: [ListEndpointGroups, CreateEndpointGroup, UpdateEndpointGroup, DeleteEndpointGroup]
+    workflows: [Amazon Global Accelerator Network Operations]
+    personas: [Network Engineer]

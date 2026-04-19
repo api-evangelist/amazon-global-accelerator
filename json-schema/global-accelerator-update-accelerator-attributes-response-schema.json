@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-update-accelerator-attributes-response-schema.json",
+  "title": "UpdateAcceleratorAttributesResponse",
+  "description": "UpdateAcceleratorAttributesResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "AcceleratorAttributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AcceleratorAttributes"
+        },
+        {
+          "description": "Updated attributes for the accelerator."
+        }
+      ]
+    }
+  }
+}

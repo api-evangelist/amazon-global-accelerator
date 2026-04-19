@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-ip-set-structure.json",
+  "name": "IpSet",
+  "description": "A complex type for the set of IP addresses for an accelerator.",
+  "type": "object",
+  "properties": {
+    "IpFamily": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "deprecated": true,
+          "description": "IpFamily is deprecated and has been replaced by IpAddressFamily.IpFamily has been replaced by IpAddressFamily"
+        }
+      ]
+    },
+    "IpAddresses": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpAddresses"
+        },
+        {
+          "description": "The array of IP addresses in the IP address set. An IP address set can have a maximum of two IP addresses."
+        }
+      ]
+    },
+    "IpAddressFamily": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpAddressFamily"
+        },
+        {
+          "description": "The types of IP addresses included in this IP set. "
+        }
+      ]
+    }
+  }
+}

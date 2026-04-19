@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-create-endpoint-group-response-structure.json",
+  "name": "CreateEndpointGroupResponse",
+  "description": "CreateEndpointGroupResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointGroup": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointGroup"
+        },
+        {
+          "description": "The information about the endpoint group that was created."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "EndpointGroupArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "EndpointGroupRegion": "us-east-1",
+  "DestinationDescriptions": "1.2.3.4",
+  "EndpointDescriptions": "1.2.3.4"
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-health-check-path-structure.json",
+  "name": "HealthCheckPath",
+  "description": "HealthCheckPath schema from Amazon Global Accelerator API",
+  "type": "string",
+  "pattern": "^/[-a-zA-Z0-9@:%_\\\\+.~#?&/=]*$"
+}

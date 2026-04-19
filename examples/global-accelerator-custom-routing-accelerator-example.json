@@ -1,0 +1,10 @@
+{
+  "AcceleratorArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "Name": "MyAccelerator",
+  "IpAddressType": "1.2.3.4",
+  "Enabled": "example-Enabled",
+  "IpSets": "1.2.3.4",
+  "DnsName": "MyAccelerator",
+  "Status": "DEPLOYED",
+  "CreatedTime": "example-CreatedTime"
+}

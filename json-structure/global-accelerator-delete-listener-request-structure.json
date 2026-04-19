@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-delete-listener-request-structure.json",
+  "name": "DeleteListenerRequest",
+  "description": "DeleteListenerRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "ListenerArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the listener."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ListenerArn"
+  ]
+}

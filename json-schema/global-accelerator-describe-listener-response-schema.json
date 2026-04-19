@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-describe-listener-response-schema.json",
+  "title": "DescribeListenerResponse",
+  "description": "DescribeListenerResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Listener": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Listener"
+        },
+        {
+          "description": "The description of a listener."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-cidr-authorization-context-structure.json",
+  "name": "CidrAuthorizationContext",
+  "description": "<p>Provides authorization for Amazon to bring a specific IP address range to a specific Amazon Web Services account using bring your own IP addresses (BYOIP). </p> <p>For more information, see <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html\">Bring your own IP addresses (BYOIP)</a> in the <i>Global Accelerator Developer Guide</i>.</p>",
+  "type": "object",
+  "properties": {
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The plain-text authorization message for the prefix and account."
+        }
+      ]
+    },
+    "Signature": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The signed authorization message for the prefix and account."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Message",
+    "Signature"
+  ]
+}

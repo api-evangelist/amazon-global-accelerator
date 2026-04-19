@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-create-accelerator-response-structure.json",
+  "name": "CreateAcceleratorResponse",
+  "description": "CreateAcceleratorResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Accelerator": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Accelerator"
+        },
+        {
+          "description": "The accelerator that is created by specifying a listener and the supported IP address types."
+        }
+      ]
+    }
+  }
+}

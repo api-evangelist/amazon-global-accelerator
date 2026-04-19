@@ -1,0 +1,5 @@
+{
+  "EndpointId": "example-EndpointId",
+  "Weight": "example-Weight",
+  "ClientIPPreservationEnabled": "1.2.3.4"
+}

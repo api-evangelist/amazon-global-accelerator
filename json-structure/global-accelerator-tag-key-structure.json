@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-tag-key-structure.json",
+  "name": "TagKey",
+  "description": "TagKey schema from Amazon Global Accelerator API",
+  "type": "string"
+}

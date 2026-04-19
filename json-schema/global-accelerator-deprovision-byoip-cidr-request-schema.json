@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-deprovision-byoip-cidr-request-schema.json",
+  "title": "DeprovisionByoipCidrRequest",
+  "description": "DeprovisionByoipCidrRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Cidr": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The address range, in CIDR notation. The prefix must be the same prefix that you specified when you provisioned the address range."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Cidr"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-internal-service-error-exception-schema.json",
+  "title": "InternalServiceErrorException",
+  "description": "InternalServiceErrorException schema from Amazon Global Accelerator API"
+}

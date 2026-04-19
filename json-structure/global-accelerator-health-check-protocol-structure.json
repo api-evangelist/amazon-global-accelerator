@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-health-check-protocol-structure.json",
+  "name": "HealthCheckProtocol",
+  "description": "HealthCheckProtocol schema from Amazon Global Accelerator API",
+  "type": "string",
+  "enum": [
+    "TCP",
+    "HTTP",
+    "HTTPS"
+  ]
+}

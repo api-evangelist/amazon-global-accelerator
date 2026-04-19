@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-endpoint-weight-structure.json",
+  "name": "EndpointWeight",
+  "description": "EndpointWeight schema from Amazon Global Accelerator API",
+  "type": "int32",
+  "minimum": 0,
+  "maximum": 255
+}

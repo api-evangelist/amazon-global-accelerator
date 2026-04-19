@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-list-custom-routing-listeners-request-schema.json",
+  "title": "ListCustomRoutingListenersRequest",
+  "description": "ListCustomRoutingListenersRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "AcceleratorArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the accelerator to list listeners for."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResults"
+        },
+        {
+          "description": "The number of listener objects that you want to return with this call. The default value is 10."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next set of results. You receive this token from a previous call."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AcceleratorArn"
+  ]
+}

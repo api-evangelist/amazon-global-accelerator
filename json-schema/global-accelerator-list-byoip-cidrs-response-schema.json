@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-list-byoip-cidrs-response-schema.json",
+  "title": "ListByoipCidrsResponse",
+  "description": "ListByoipCidrsResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "ByoipCidrs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ByoipCidrs"
+        },
+        {
+          "description": "Information about your address ranges."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next page of results."
+        }
+      ]
+    }
+  }
+}

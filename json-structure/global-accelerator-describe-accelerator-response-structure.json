@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-describe-accelerator-response-structure.json",
+  "name": "DescribeAcceleratorResponse",
+  "description": "DescribeAcceleratorResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Accelerator": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Accelerator"
+        },
+        {
+          "description": "The description of the accelerator."
+        }
+      ]
+    }
+  }
+}

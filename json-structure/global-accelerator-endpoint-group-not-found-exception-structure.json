@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-endpoint-group-not-found-exception-structure.json",
+  "name": "EndpointGroupNotFoundException",
+  "description": "EndpointGroupNotFoundException schema from Amazon Global Accelerator API"
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-incorrect-cidr-state-exception-schema.json",
+  "title": "IncorrectCidrStateException",
+  "description": "IncorrectCidrStateException schema from Amazon Global Accelerator API"
+}

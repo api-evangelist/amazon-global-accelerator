@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-custom-routing-destination-description-schema.json",
+  "title": "CustomRoutingDestinationDescription",
+  "description": "For a custom routing accelerator, describes the port range and protocol for all endpoints (virtual private cloud subnets) in an endpoint group to accept client traffic on.",
+  "type": "object",
+  "properties": {
+    "FromPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortNumber"
+        },
+        {
+          "description": "The first port, inclusive, in the range of ports for the endpoint group that is associated with a custom routing accelerator."
+        }
+      ]
+    },
+    "ToPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortNumber"
+        },
+        {
+          "description": "The last port, inclusive, in the range of ports for the endpoint group that is associated with a custom routing accelerator."
+        }
+      ]
+    },
+    "Protocols": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Protocols"
+        },
+        {
+          "description": "The protocol for the endpoint group that is associated with a custom routing accelerator. The protocol can be either TCP or UDP."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-list-custom-routing-port-mappings-response-structure.json",
+  "name": "ListCustomRoutingPortMappingsResponse",
+  "description": "ListCustomRoutingPortMappingsResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "PortMappings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortMappings"
+        },
+        {
+          "description": "The port mappings for a custom routing accelerator."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next set of results. You receive this token from a previous call."
+        }
+      ]
+    }
+  }
+}

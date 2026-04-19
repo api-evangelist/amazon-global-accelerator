@@ -1,0 +1,8 @@
+{
+  "AcceleratorPort": "example-AcceleratorPort",
+  "EndpointGroupArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "EndpointId": "example-EndpointId",
+  "DestinationSocketAddress": "example-DestinationSock",
+  "Protocols": "example-Protocols",
+  "DestinationTrafficState": "example-DestinationTraf"
+}

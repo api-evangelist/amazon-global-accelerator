@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-health-check-interval-seconds-schema.json",
+  "title": "HealthCheckIntervalSeconds",
+  "description": "HealthCheckIntervalSeconds schema from Amazon Global Accelerator API",
+  "type": "integer",
+  "minimum": 10,
+  "maximum": 30
+}

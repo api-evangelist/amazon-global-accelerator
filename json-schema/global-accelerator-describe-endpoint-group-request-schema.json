@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-describe-endpoint-group-request-schema.json",
+  "title": "DescribeEndpointGroupRequest",
+  "description": "DescribeEndpointGroupRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group to describe."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointGroupArn"
+  ]
+}

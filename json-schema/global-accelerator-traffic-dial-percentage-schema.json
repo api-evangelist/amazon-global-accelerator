@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-traffic-dial-percentage-schema.json",
+  "title": "TrafficDialPercentage",
+  "description": "TrafficDialPercentage schema from Amazon Global Accelerator API",
+  "type": "number",
+  "format": "float",
+  "minimum": 0,
+  "maximum": 100
+}

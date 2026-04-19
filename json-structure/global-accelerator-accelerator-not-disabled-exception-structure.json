@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-accelerator-not-disabled-exception-structure.json",
+  "name": "AcceleratorNotDisabledException",
+  "description": "AcceleratorNotDisabledException schema from Amazon Global Accelerator API"
+}

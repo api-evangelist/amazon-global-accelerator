@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-list-accelerators-response-structure.json",
+  "name": "ListAcceleratorsResponse",
+  "description": "ListAcceleratorsResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Accelerators": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Accelerators"
+        },
+        {
+          "description": "The list of accelerators for a customer account."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next set of results. You receive this token from a previous call."
+        }
+      ]
+    }
+  }
+}

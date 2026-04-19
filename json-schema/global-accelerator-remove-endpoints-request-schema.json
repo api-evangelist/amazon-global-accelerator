@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-remove-endpoints-request-schema.json",
+  "title": "RemoveEndpointsRequest",
+  "description": "RemoveEndpointsRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointIdentifiers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointIdentifiers"
+        },
+        {
+          "description": "The identifiers of the endpoints that you want to remove."
+        }
+      ]
+    },
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointIdentifiers",
+    "EndpointGroupArn"
+  ]
+}

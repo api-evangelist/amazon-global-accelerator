@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-update-accelerator-request-schema.json",
+  "title": "UpdateAcceleratorRequest",
+  "description": "UpdateAcceleratorRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "AcceleratorArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the accelerator to update."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The name of the accelerator. The name can have a maximum of 64 characters, must contain only alphanumeric characters, periods (.), or hyphens (-), and must not begin or end with a hyphen or period."
+        }
+      ]
+    },
+    "IpAddressType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpAddressType"
+        },
+        {
+          "description": "The IP address type that an accelerator supports. For a standard accelerator, the value can be IPV4 or DUAL_STACK."
+        }
+      ]
+    },
+    "Enabled": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericBoolean"
+        },
+        {
+          "description": "<p>Indicates whether an accelerator is enabled. The value is true or false. The default value is true. </p> <p>If the value is set to true, the accelerator cannot be deleted. If set to false, the accelerator can be deleted.</p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "AcceleratorArn"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-delete-endpoint-group-request-schema.json",
+  "title": "DeleteEndpointGroupRequest",
+  "description": "DeleteEndpointGroupRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointGroupArn"
+  ]
+}

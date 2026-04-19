@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-list-listeners-response-schema.json",
+  "title": "ListListenersResponse",
+  "description": "ListListenersResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Listeners": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Listeners"
+        },
+        {
+          "description": "The list of listeners for an accelerator."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The token for the next set of results. You receive this token from a previous call."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-add-endpoints-response-structure.json",
+  "name": "AddEndpointsResponse",
+  "description": "AddEndpointsResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointDescriptions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointDescriptions"
+        },
+        {
+          "description": "The list of endpoint objects."
+        }
+      ]
+    },
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group."
+        }
+      ]
+    }
+  }
+}

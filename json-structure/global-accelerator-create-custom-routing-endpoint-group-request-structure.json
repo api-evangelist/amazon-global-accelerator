@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-create-custom-routing-endpoint-group-request-structure.json",
+  "name": "CreateCustomRoutingEndpointGroupRequest",
+  "description": "CreateCustomRoutingEndpointGroupRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "ListenerArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the listener for a custom routing endpoint."
+        }
+      ]
+    },
+    "EndpointGroupRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Web Services Region where the endpoint group is located. A listener can have only one endpoint group in a specific Region."
+        }
+      ]
+    },
+    "DestinationConfigurations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingDestinationConfigurations"
+        },
+        {
+          "description": "Sets the port range and protocol for all endpoints (virtual private cloud subnets) in a custom routing endpoint group to accept client traffic on."
+        }
+      ]
+    },
+    "IdempotencyToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdempotencyToken"
+        },
+        {
+          "description": "A unique, case-sensitive identifier that you provide to ensure the idempotency\u2014that is, the uniqueness\u2014of the request."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ListenerArn",
+    "EndpointGroupRegion",
+    "DestinationConfigurations",
+    "IdempotencyToken"
+  ]
+}

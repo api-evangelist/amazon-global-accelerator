@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-create-listener-response-structure.json",
+  "name": "CreateListenerResponse",
+  "description": "CreateListenerResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Listener": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Listener"
+        },
+        {
+          "description": "The listener that you've created."
+        }
+      ]
+    }
+  }
+}

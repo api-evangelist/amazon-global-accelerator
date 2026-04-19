@@ -1,0 +1,4 @@
+{
+  "DestinationPortMappings": "example-DestinationPort",
+  "NextToken": "example-NextToken"
+}

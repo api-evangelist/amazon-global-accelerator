@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-remove-custom-routing-endpoints-request-structure.json",
+  "name": "RemoveCustomRoutingEndpointsRequest",
+  "description": "RemoveCustomRoutingEndpointsRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointIds"
+        },
+        {
+          "description": "The IDs for the endpoints. For custom routing accelerators, endpoint IDs are the virtual private cloud (VPC) subnet IDs. "
+        }
+      ]
+    },
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group to remove endpoints from."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointIds",
+    "EndpointGroupArn"
+  ]
+}

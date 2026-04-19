@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-update-custom-routing-accelerator-response-structure.json",
+  "name": "UpdateCustomRoutingAcceleratorResponse",
+  "description": "UpdateCustomRoutingAcceleratorResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Accelerator": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingAccelerator"
+        },
+        {
+          "description": "Information about the updated custom routing accelerator."
+        }
+      ]
+    }
+  }
+}

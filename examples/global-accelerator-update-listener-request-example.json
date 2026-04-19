@@ -1,0 +1,6 @@
+{
+  "ListenerArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "PortRanges": "example-PortRanges",
+  "Protocol": "example-Protocol",
+  "ClientAffinity": "example-ClientAffinity"
+}

@@ -1,0 +1,15 @@
+{
+  "acceleratorArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "name": "MyAccelerator",
+  "ipAddressType": "IPV4",
+  "enabled": true,
+  "ipSets": [
+    {
+      "ipFamily": {},
+      "ipAddresses": {}
+    }
+  ],
+  "dnsName": "MyAccelerator",
+  "status": "DEPLOYED",
+  "createdTime": "2025-03-15T14:30:00Z"
+}

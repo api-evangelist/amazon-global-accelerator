@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-create-custom-routing-endpoint-group-response-schema.json",
+  "title": "CreateCustomRoutingEndpointGroupResponse",
+  "description": "CreateCustomRoutingEndpointGroupResponse schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "EndpointGroup": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingEndpointGroup"
+        },
+        {
+          "description": "The information about the endpoint group created for a custom routing accelerator."
+        }
+      ]
+    }
+  }
+}

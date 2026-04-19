@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-untag-resource-request-structure.json",
+  "name": "UntagResourceRequest",
+  "description": "UntagResourceRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "ResourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the Global Accelerator resource to remove tags from. An ARN uniquely identifies a resource."
+        }
+      ]
+    },
+    "TagKeys": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagKeys"
+        },
+        {
+          "description": "The tag key pairs that you want to remove from the specified resources."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceArn",
+    "TagKeys"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-endpoint-descriptions-structure.json",
+  "name": "EndpointDescriptions",
+  "description": "EndpointDescriptions schema from Amazon Global Accelerator API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/EndpointDescription"
+  }
+}

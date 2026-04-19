@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-byoip-cidrs-schema.json",
+  "title": "ByoipCidrs",
+  "description": "ByoipCidrs schema from Amazon Global Accelerator API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ByoipCidr"
+  }
+}

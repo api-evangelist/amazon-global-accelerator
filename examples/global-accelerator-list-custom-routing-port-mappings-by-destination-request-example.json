@@ -1,0 +1,6 @@
+{
+  "EndpointId": "example-EndpointId",
+  "DestinationAddress": "example-DestinationAddr",
+  "MaxResults": "example-MaxResults",
+  "NextToken": "example-NextToken"
+}

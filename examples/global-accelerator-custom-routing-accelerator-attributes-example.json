@@ -1,0 +1,5 @@
+{
+  "FlowLogsEnabled": "example-FlowLogsEnabled",
+  "FlowLogsS3Bucket": "example-FlowLogsS3Bucke",
+  "FlowLogsS3Prefix": "example-FlowLogsS3Prefi"
+}

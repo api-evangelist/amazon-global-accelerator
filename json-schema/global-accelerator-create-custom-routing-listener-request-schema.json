@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-create-custom-routing-listener-request-schema.json",
+  "title": "CreateCustomRoutingListenerRequest",
+  "description": "CreateCustomRoutingListenerRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "AcceleratorArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the accelerator for a custom routing listener."
+        }
+      ]
+    },
+    "PortRanges": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortRanges"
+        },
+        {
+          "description": "<p>The port range to support for connections from clients to your accelerator.</p> <p>Separately, you set port ranges for endpoints. For more information, see <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-endpoints.html\">About endpoints for custom routing accelerators</a>.</p>"
+        }
+      ]
+    },
+    "IdempotencyToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdempotencyToken"
+        },
+        {
+          "description": "A unique, case-sensitive identifier that you provide to ensure the idempotency\u2014that is, the uniqueness\u2014of the request."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AcceleratorArn",
+    "PortRanges",
+    "IdempotencyToken"
+  ]
+}

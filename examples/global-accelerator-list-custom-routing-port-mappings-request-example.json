@@ -1,0 +1,6 @@
+{
+  "AcceleratorArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "EndpointGroupArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "MaxResults": "example-MaxResults",
+  "NextToken": "example-NextToken"
+}

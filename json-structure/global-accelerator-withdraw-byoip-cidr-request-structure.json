@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-withdraw-byoip-cidr-request-structure.json",
+  "name": "WithdrawByoipCidrRequest",
+  "description": "WithdrawByoipCidrRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "Cidr": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The address range, in CIDR notation."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Cidr"
+  ]
+}

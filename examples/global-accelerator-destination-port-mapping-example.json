@@ -1,0 +1,10 @@
+{
+  "AcceleratorArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "AcceleratorSocketAddresses": "example-AcceleratorSock",
+  "EndpointGroupArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "EndpointId": "example-EndpointId",
+  "EndpointGroupRegion": "us-east-1",
+  "DestinationSocketAddress": "example-DestinationSock",
+  "IpAddressType": "1.2.3.4",
+  "DestinationTrafficState": "example-DestinationTraf"
+}

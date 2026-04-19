@@ -1,0 +1,6 @@
+{
+  "AcceleratorArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "FlowLogsEnabled": "example-FlowLogsEnabled",
+  "FlowLogsS3Bucket": "example-FlowLogsS3Bucke",
+  "FlowLogsS3Prefix": "example-FlowLogsS3Prefi"
+}

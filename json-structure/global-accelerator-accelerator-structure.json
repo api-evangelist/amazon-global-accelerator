@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-accelerator-structure.json",
+  "name": "Accelerator",
+  "description": "An accelerator is a complex type that includes one or more listeners that process inbound connections and then direct traffic to one or more endpoint groups, each of which includes endpoints, such as load balancers.",
+  "type": "object",
+  "properties": {
+    "AcceleratorArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the accelerator."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The name of the accelerator. The name must contain only alphanumeric characters or hyphens (-), and must not begin or end with a hyphen."
+        }
+      ]
+    },
+    "IpAddressType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpAddressType"
+        },
+        {
+          "description": "The IP address type that an accelerator supports. For a standard accelerator, the value can be IPV4 or DUAL_STACK."
+        }
+      ]
+    },
+    "Enabled": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericBoolean"
+        },
+        {
+          "description": "<p>Indicates whether the accelerator is enabled. The value is true or false. The default value is true. </p> <p>If the value is set to true, the accelerator cannot be deleted. If set to false, accelerator can be deleted.</p>"
+        }
+      ]
+    },
+    "IpSets": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpSets"
+        },
+        {
+          "description": "The static IP addresses that Global Accelerator associates with the accelerator."
+        }
+      ]
+    },
+    "DnsName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "<p>The Domain Name System (DNS) name that Global Accelerator creates that points to an accelerator's static IPv4 addresses.</p> <p>The naming convention for the DNS name for an accelerator is the following: A lowercase letter a, followed by a 16-bit random hex string, followed by .awsglobalaccelerator.com. For example: a1234567890abcdef.awsglobalaccelerator.com.</p> <p>If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>, that points to both the A record and the AAAA record for all four static addresses for the accelerator: two IPv4 addresses and two IPv6 addresses.</p> <p>For more information about the default DNS name, see <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html\"> Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.</p>"
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AcceleratorStatus"
+        },
+        {
+          "description": "Describes the deployment status of the accelerator."
+        }
+      ]
+    },
+    "CreatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time that the accelerator was created."
+        }
+      ]
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time that the accelerator was last modified."
+        }
+      ]
+    },
+    "DualStackDnsName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "<p>The Domain Name System (DNS) name that Global Accelerator creates that points to a dual-stack accelerator's four static IP addresses: two IPv4 addresses and two IPv6 addresses.</p> <p>The naming convention for the dual-stack DNS name is the following: A lowercase letter a, followed by a 16-bit random hex string, followed by .dualstack.awsglobalaccelerator.com. For example: a1234567890abcdef.dualstack.awsglobalaccelerator.com.</p> <p>Note: Global Accelerator also assigns a default DNS name, <code>DnsName</code>, to your accelerator that points just to the static IPv4 addresses. </p> <p>For more information, see <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/about-accelerators.html#about-accelerators.dns-addressing\"> Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.</p>"
+        }
+      ]
+    },
+    "Events": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AcceleratorEvents"
+        },
+        {
+          "description": "A history of changes that you make to an accelerator in Global Accelerator."
+        }
+      ]
+    }
+  }
+}

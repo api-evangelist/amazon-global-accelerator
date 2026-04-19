@@ -1,0 +1,4 @@
+{
+  "ListenerPort": "example-ListenerPort",
+  "EndpointPort": "example-EndpointPort"
+}

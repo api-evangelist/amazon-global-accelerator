@@ -1,0 +1,10 @@
+{
+  "EndpointGroupArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "EndpointConfigurations": "example-EndpointConfigu",
+  "TrafficDialPercentage": "example-TrafficDialPerc",
+  "HealthCheckPort": "example-HealthCheckPort",
+  "HealthCheckProtocol": "example-HealthCheckProt",
+  "HealthCheckPath": "example-HealthCheckPath",
+  "HealthCheckIntervalSeconds": "example-HealthCheckInte",
+  "ThresholdCount": "example-ThresholdCount"
+}

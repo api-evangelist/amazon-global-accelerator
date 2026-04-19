@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-structure/global-accelerator-destination-port-mapping-structure.json",
+  "name": "DestinationPortMapping",
+  "description": "The port mappings for a specified endpoint IP address (destination).",
+  "type": "object",
+  "properties": {
+    "AcceleratorArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the custom routing accelerator that you have port mappings for."
+        }
+      ]
+    },
+    "AcceleratorSocketAddresses": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SocketAddresses"
+        },
+        {
+          "description": "The IP address/port combinations (sockets) that map to a given destination socket address."
+        }
+      ]
+    },
+    "EndpointGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the endpoint group."
+        }
+      ]
+    },
+    "EndpointId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The ID for the virtual private cloud (VPC) subnet."
+        }
+      ]
+    },
+    "EndpointGroupRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Web Services Region for the endpoint group."
+        }
+      ]
+    },
+    "DestinationSocketAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SocketAddress"
+        },
+        {
+          "description": "The endpoint IP address/port combination for traffic received on the accelerator socket address."
+        }
+      ]
+    },
+    "IpAddressType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpAddressType"
+        },
+        {
+          "description": "The IP address type that an accelerator supports. For a custom routing accelerator, the value must be IPV4."
+        }
+      ]
+    },
+    "DestinationTrafficState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomRoutingDestinationTrafficState"
+        },
+        {
+          "description": "Indicates whether or not a port mapping destination can receive traffic. The value is either ALLOW, if traffic is allowed to the destination, or DENY, if traffic is not allowed to the destination."
+        }
+      ]
+    }
+  }
+}

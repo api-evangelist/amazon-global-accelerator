@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-list-tags-for-resource-request-schema.json",
+  "title": "ListTagsForResourceRequest",
+  "description": "ListTagsForResourceRequest schema from Amazon Global Accelerator API",
+  "type": "object",
+  "properties": {
+    "ResourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the accelerator to list tags for. An ARN uniquely identifies an accelerator."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceArn"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "ResourceArn": "arn:aws:globalaccelerator::123456789012:accelerator/abc-123",
+  "TagKeys": "example-TagKeys"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/json-schema/global-accelerator-tag-schema.json",
+  "title": "Tag",
+  "description": "A complex type that contains a <code>Tag</code> key and <code>Tag</code> value.",
+  "type": "object",
+  "properties": {
+    "Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagKey"
+        },
+        {
+          "description": "A string that contains a <code>Tag</code> key."
+        }
+      ]
+    },
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagValue"
+        },
+        {
+          "description": "A string that contains a <code>Tag</code> value."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Key",
+    "Value"
+  ]
+}
