@@ -1,200 +1,323 @@
-naftiko: "1.0.0-alpha1"
-
+naftiko: 1.0.0-alpha2
 info:
   label: Amazon Global Accelerator Network Operations
-  description: >-
-    Workflow capability for network engineers and DevOps teams managing Amazon Global
-    Accelerator infrastructure. Covers accelerator lifecycle, listener configuration,
-    endpoint group management, and traffic routing optimization.
+  description: Workflow capability for network engineers and DevOps teams managing Amazon Global Accelerator infrastructure.
+    Covers accelerator lifecycle, listener configuration, endpoint group management, and traffic routing optimization.
   tags:
-    - Amazon Global Accelerator
-    - Networking
-    - Performance
-    - Traffic Routing
-    - AWS
-  created: "2026-04-19"
-  modified: "2026-04-19"
-
+  - Amazon Global Accelerator
+  - Networking
+  - Performance
+  - Traffic Routing
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-05-06'
 binds:
-  - namespace: env
-    keys:
-      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
-      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
-      AWS_REGION: AWS_REGION
-
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
 capability:
   consumes:
-    - import: amazon-global-accelerator
-      location: ./shared/amazon-global-accelerator.yaml
-
+  - type: http
+    namespace: amazon-global-accelerator
+    baseUri: https://globalaccelerator.amazonaws.com
+    description: Amazon Global Accelerator API
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_AUTH_HEADER}}'
+      placement: header
+    resources:
+    - name: accelerators
+      path: /accelerators
+      description: Manage Global Accelerator accelerators
+      operations:
+      - name: ListAccelerators
+        method: POST
+        description: List all accelerators
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: CreateAccelerator
+        method: POST
+        description: Create a new accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DescribeAccelerator
+        method: POST
+        description: Get accelerator details
+        inputParameters:
+        - name: AcceleratorArn
+          in: body
+          type: string
+          required: true
+          description: The ARN of the accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: UpdateAccelerator
+        method: POST
+        description: Update accelerator configuration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DeleteAccelerator
+        method: POST
+        description: Delete an accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: listeners
+      path: /listeners
+      description: Manage accelerator listeners
+      operations:
+      - name: CreateListener
+        method: POST
+        description: Create a listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListListeners
+        method: POST
+        description: List listeners for an accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: UpdateListener
+        method: POST
+        description: Update a listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DeleteListener
+        method: POST
+        description: Delete a listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: endpoint-groups
+      path: /endpoint-groups
+      description: Manage listener endpoint groups
+      operations:
+      - name: CreateEndpointGroup
+        method: POST
+        description: Create an endpoint group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListEndpointGroups
+        method: POST
+        description: List endpoint groups for a listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: UpdateEndpointGroup
+        method: POST
+        description: Update an endpoint group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DeleteEndpointGroup
+        method: POST
+        description: Delete an endpoint group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
   exposes:
-    - type: rest
-      port: 8081
-      namespace: global-accelerator-ops-api
-      description: Unified REST API for Amazon Global Accelerator network operations.
-      resources:
-        - path: /v1/accelerators
-          name: accelerators
-          description: Manage Global Accelerator accelerators
-          operations:
-            - method: GET
-              name: list-accelerators
-              description: List all accelerators
-              call: amazon-global-accelerator.ListAccelerators
-              outputParameters:
-                - type: object
-                  mapping: "$."
-            - method: POST
-              name: create-accelerator
-              description: Create a new accelerator with static IPs
-              call: amazon-global-accelerator.CreateAccelerator
-              outputParameters:
-                - type: object
-                  mapping: "$."
-        - path: /v1/accelerators/{acceleratorArn}
-          name: accelerator-detail
-          description: Manage a specific accelerator
-          operations:
-            - method: GET
-              name: describe-accelerator
-              description: Get accelerator details and status
-              call: amazon-global-accelerator.DescribeAccelerator
-              outputParameters:
-                - type: object
-                  mapping: "$."
-        - path: /v1/listeners
-          name: listeners
-          description: Manage listeners for accelerators
-          operations:
-            - method: POST
-              name: create-listener
-              description: Create a new listener
-              call: amazon-global-accelerator.CreateListener
-              outputParameters:
-                - type: object
-                  mapping: "$."
-            - method: GET
-              name: list-listeners
-              description: List all listeners
-              call: amazon-global-accelerator.ListListeners
-              outputParameters:
-                - type: object
-                  mapping: "$."
-        - path: /v1/endpoint-groups
-          name: endpoint-groups
-          description: Manage endpoint groups for traffic routing
-          operations:
-            - method: POST
-              name: create-endpoint-group
-              description: Create an endpoint group
-              call: amazon-global-accelerator.CreateEndpointGroup
-              outputParameters:
-                - type: object
-                  mapping: "$."
-            - method: GET
-              name: list-endpoint-groups
-              description: List endpoint groups
-              call: amazon-global-accelerator.ListEndpointGroups
-              outputParameters:
-                - type: object
-                  mapping: "$."
-
-    - type: mcp
-      port: 9091
-      namespace: global-accelerator-ops-mcp
-      transport: http
-      description: MCP server for AI-assisted Amazon Global Accelerator network management.
-      tools:
-        - name: list-accelerators
-          description: List all Global Accelerator accelerators and their static IP addresses
-          hints:
-            readOnly: true
-            openWorld: true
-          call: amazon-global-accelerator.ListAccelerators
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: create-accelerator
-          description: Create a new Global Accelerator with static Anycast IP addresses
-          hints:
-            readOnly: false
-          call: amazon-global-accelerator.CreateAccelerator
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: describe-accelerator
-          description: Get detailed status and configuration of a specific accelerator
-          hints:
-            readOnly: true
-          call: amazon-global-accelerator.DescribeAccelerator
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: update-accelerator
-          description: Update accelerator configuration and settings
-          hints:
-            readOnly: false
-            idempotent: true
-          call: amazon-global-accelerator.UpdateAccelerator
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: delete-accelerator
-          description: Delete an accelerator
-          hints:
-            readOnly: false
-            destructive: true
-          call: amazon-global-accelerator.DeleteAccelerator
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: create-listener
-          description: Create a listener for an accelerator specifying ports and protocol
-          hints:
-            readOnly: false
-          call: amazon-global-accelerator.CreateListener
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: list-listeners
-          description: List all listeners configured for an accelerator
-          hints:
-            readOnly: true
-          call: amazon-global-accelerator.ListListeners
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: update-listener
-          description: Update listener configuration including ports and protocol
-          hints:
-            readOnly: false
-            idempotent: true
-          call: amazon-global-accelerator.UpdateListener
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: create-endpoint-group
-          description: Create an endpoint group to route traffic to specific AWS resources
-          hints:
-            readOnly: false
-          call: amazon-global-accelerator.CreateEndpointGroup
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: list-endpoint-groups
-          description: List all endpoint groups for a listener
-          hints:
-            readOnly: true
-          call: amazon-global-accelerator.ListEndpointGroups
-          outputParameters:
-            - type: object
-              mapping: "$."
-        - name: update-endpoint-group
-          description: Update endpoint group traffic settings and weights
-          hints:
-            readOnly: false
-            idempotent: true
-          call: amazon-global-accelerator.UpdateEndpointGroup
-          outputParameters:
-            - type: object
-              mapping: "$."
+  - type: rest
+    port: 8081
+    namespace: global-accelerator-ops-api
+    description: Unified REST API for Amazon Global Accelerator network operations.
+    resources:
+    - path: /v1/accelerators
+      name: accelerators
+      description: Manage Global Accelerator accelerators
+      operations:
+      - method: GET
+        name: list-accelerators
+        description: List all accelerators
+        call: amazon-global-accelerator.ListAccelerators
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: create-accelerator
+        description: Create a new accelerator with static IPs
+        call: amazon-global-accelerator.CreateAccelerator
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/accelerators/{acceleratorArn}
+      name: accelerator-detail
+      description: Manage a specific accelerator
+      operations:
+      - method: GET
+        name: describe-accelerator
+        description: Get accelerator details and status
+        call: amazon-global-accelerator.DescribeAccelerator
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/listeners
+      name: listeners
+      description: Manage listeners for accelerators
+      operations:
+      - method: POST
+        name: create-listener
+        description: Create a new listener
+        call: amazon-global-accelerator.CreateListener
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: list-listeners
+        description: List all listeners
+        call: amazon-global-accelerator.ListListeners
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/endpoint-groups
+      name: endpoint-groups
+      description: Manage endpoint groups for traffic routing
+      operations:
+      - method: POST
+        name: create-endpoint-group
+        description: Create an endpoint group
+        call: amazon-global-accelerator.CreateEndpointGroup
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: list-endpoint-groups
+        description: List endpoint groups
+        call: amazon-global-accelerator.ListEndpointGroups
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9091
+    namespace: global-accelerator-ops-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Global Accelerator network management.
+    tools:
+    - name: list-accelerators
+      description: List all Global Accelerator accelerators and their static IP addresses
+      hints:
+        readOnly: true
+        openWorld: true
+      call: amazon-global-accelerator.ListAccelerators
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-accelerator
+      description: Create a new Global Accelerator with static Anycast IP addresses
+      hints:
+        readOnly: false
+      call: amazon-global-accelerator.CreateAccelerator
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describe-accelerator
+      description: Get detailed status and configuration of a specific accelerator
+      hints:
+        readOnly: true
+      call: amazon-global-accelerator.DescribeAccelerator
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-accelerator
+      description: Update accelerator configuration and settings
+      hints:
+        readOnly: false
+        idempotent: true
+      call: amazon-global-accelerator.UpdateAccelerator
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-accelerator
+      description: Delete an accelerator
+      hints:
+        readOnly: false
+        destructive: true
+      call: amazon-global-accelerator.DeleteAccelerator
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-listener
+      description: Create a listener for an accelerator specifying ports and protocol
+      hints:
+        readOnly: false
+      call: amazon-global-accelerator.CreateListener
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-listeners
+      description: List all listeners configured for an accelerator
+      hints:
+        readOnly: true
+      call: amazon-global-accelerator.ListListeners
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-listener
+      description: Update listener configuration including ports and protocol
+      hints:
+        readOnly: false
+        idempotent: true
+      call: amazon-global-accelerator.UpdateListener
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-endpoint-group
+      description: Create an endpoint group to route traffic to specific AWS resources
+      hints:
+        readOnly: false
+      call: amazon-global-accelerator.CreateEndpointGroup
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-endpoint-groups
+      description: List all endpoint groups for a listener
+      hints:
+        readOnly: true
+      call: amazon-global-accelerator.ListEndpointGroups
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-endpoint-group
+      description: Update endpoint group traffic settings and weights
+      hints:
+        readOnly: false
+        idempotent: true
+      call: amazon-global-accelerator.UpdateEndpointGroup
+      outputParameters:
+      - type: object
+        mapping: $.
