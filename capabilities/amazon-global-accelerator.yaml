@@ -1,0 +1,2500 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: AWS Global Accelerator
+  description: 'AWS Global Accelerator. 49 operations. Lead operation: Amazon Global Accelerator Add Custom Routing Endpoints.
+    Self-contained Naftiko capability covering one Amazon Global Accelerator business surface.'
+  tags:
+  - Amazon Global Accelerator
+  - AWS Global Accelerator
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_GLOBAL_ACCELERATOR_API_KEY: AMAZON_GLOBAL_ACCELERATOR_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-global-accelerator
+    baseUri: http://globalaccelerator.{region}.amazonaws.com
+    description: AWS Global Accelerator business capability. Self-contained, no shared references.
+    resources:
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.AddCustomRoutingEndpoints'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.AddCustomRoutingEndpoints
+      operations:
+      - name: addcustomroutingendpoints
+        method: POST
+        description: Amazon Global Accelerator Add Custom Routing Endpoints
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints
+      operations:
+      - name: addendpoints
+        method: POST
+        description: Amazon Global Accelerator Add Endpoints
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.AdvertiseByoipCidr'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.AdvertiseByoipCidr
+      operations:
+      - name: advertisebyoipcidr
+        method: POST
+        description: Amazon Global Accelerator Advertise Byoip Cidr
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.AllowCustomRoutingTraffic'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.AllowCustomRoutingTraffic
+      operations:
+      - name: allowcustomroutingtraffic
+        method: POST
+        description: Amazon Global Accelerator Allow Custom Routing Traffic
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.CreateAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.CreateAccelerator
+      operations:
+      - name: createaccelerator
+        method: POST
+        description: Amazon Global Accelerator Create Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingAccelerator
+      operations:
+      - name: createcustomroutingaccelerator
+        method: POST
+        description: Amazon Global Accelerator Create Custom Routing Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup
+      operations:
+      - name: createcustomroutingendpointgroup
+        method: POST
+        description: Amazon Global Accelerator Create Custom Routing Endpoint Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingListener
+      operations:
+      - name: createcustomroutinglistener
+        method: POST
+        description: Amazon Global Accelerator Create Custom Routing Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.CreateEndpointGroup'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.CreateEndpointGroup
+      operations:
+      - name: createendpointgroup
+        method: POST
+        description: Amazon Global Accelerator Create Endpoint Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.CreateListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.CreateListener
+      operations:
+      - name: createlistener
+        method: POST
+        description: Amazon Global Accelerator Create Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DeleteAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DeleteAccelerator
+      operations:
+      - name: deleteaccelerator
+        method: POST
+        description: Amazon Global Accelerator Delete Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingAccelerator
+      operations:
+      - name: deletecustomroutingaccelerator
+        method: POST
+        description: Amazon Global Accelerator Delete Custom Routing Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingEndpointGroup'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingEndpointGroup
+      operations:
+      - name: deletecustomroutingendpointgroup
+        method: POST
+        description: Amazon Global Accelerator Delete Custom Routing Endpoint Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingListener
+      operations:
+      - name: deletecustomroutinglistener
+        method: POST
+        description: Amazon Global Accelerator Delete Custom Routing Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DeleteEndpointGroup'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DeleteEndpointGroup
+      operations:
+      - name: deleteendpointgroup
+        method: POST
+        description: Amazon Global Accelerator Delete Endpoint Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DeleteListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DeleteListener
+      operations:
+      - name: deletelistener
+        method: POST
+        description: Amazon Global Accelerator Delete Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DenyCustomRoutingTraffic'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DenyCustomRoutingTraffic
+      operations:
+      - name: denycustomroutingtraffic
+        method: POST
+        description: Amazon Global Accelerator Deny Custom Routing Traffic
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DeprovisionByoipCidr'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DeprovisionByoipCidr
+      operations:
+      - name: deprovisionbyoipcidr
+        method: POST
+        description: Amazon Global Accelerator Deprovision Byoip Cidr
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeAccelerator
+      operations:
+      - name: describeaccelerator
+        method: POST
+        description: Amazon Global Accelerator Describe Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeAcceleratorAttributes'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeAcceleratorAttributes
+      operations:
+      - name: describeacceleratorattributes
+        method: POST
+        description: Amazon Global Accelerator Describe Accelerator Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingAccelerator
+      operations:
+      - name: describecustomroutingaccelerator
+        method: POST
+        description: Amazon Global Accelerator Describe Custom Routing Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingAcceleratorAttrib'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingAcceleratorAttributes
+      operations:
+      - name: describecustomroutingacceleratorattributes
+        method: POST
+        description: Amazon Global Accelerator Describe Custom Routing Accelerator Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingEndpointGroup'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingEndpointGroup
+      operations:
+      - name: describecustomroutingendpointgroup
+        method: POST
+        description: Amazon Global Accelerator Describe Custom Routing Endpoint Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingListener
+      operations:
+      - name: describecustomroutinglistener
+        method: POST
+        description: Amazon Global Accelerator Describe Custom Routing Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeEndpointGroup'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeEndpointGroup
+      operations:
+      - name: describeendpointgroup
+        method: POST
+        description: Amazon Global Accelerator Describe Endpoint Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.DescribeListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.DescribeListener
+      operations:
+      - name: describelistener
+        method: POST
+        description: Amazon Global Accelerator Describe Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListAccelerators'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListAccelerators
+      operations:
+      - name: listaccelerators
+        method: POST
+        description: Amazon Global Accelerator List Accelerators
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListByoipCidrs'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListByoipCidrs
+      operations:
+      - name: listbyoipcidrs
+        method: POST
+        description: Amazon Global Accelerator List Byoip Cidrs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingAccelerators'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingAccelerators
+      operations:
+      - name: listcustomroutingaccelerators
+        method: POST
+        description: Amazon Global Accelerator List Custom Routing Accelerators
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingEndpointGroups'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingEndpointGroups
+      operations:
+      - name: listcustomroutingendpointgroups
+        method: POST
+        description: Amazon Global Accelerator List Custom Routing Endpoint Groups
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingListeners'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingListeners
+      operations:
+      - name: listcustomroutinglisteners
+        method: POST
+        description: Amazon Global Accelerator List Custom Routing Listeners
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingPortMappings'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingPortMappings
+      operations:
+      - name: listcustomroutingportmappings
+        method: POST
+        description: Amazon Global Accelerator List Custom Routing Port Mappings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingPortMappingsByDestina'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingPortMappingsByDestination
+      operations:
+      - name: listcustomroutingportmappingsbydestination
+        method: POST
+        description: Amazon Global Accelerator List Custom Routing Port Mappings by Destination
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListEndpointGroups'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListEndpointGroups
+      operations:
+      - name: listendpointgroups
+        method: POST
+        description: Amazon Global Accelerator List Endpoint Groups
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListListeners'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListListeners
+      operations:
+      - name: listlisteners
+        method: POST
+        description: Amazon Global Accelerator List Listeners
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ListTagsForResource'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ListTagsForResource
+      operations:
+      - name: listtagsforresource
+        method: POST
+        description: Amazon Global Accelerator List Tags for Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.ProvisionByoipCidr'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.ProvisionByoipCidr
+      operations:
+      - name: provisionbyoipcidr
+        method: POST
+        description: Amazon Global Accelerator Provision Byoip Cidr
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.RemoveCustomRoutingEndpoints'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.RemoveCustomRoutingEndpoints
+      operations:
+      - name: removecustomroutingendpoints
+        method: POST
+        description: Amazon Global Accelerator Remove Custom Routing Endpoints
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.RemoveEndpoints'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.RemoveEndpoints
+      operations:
+      - name: removeendpoints
+        method: POST
+        description: Amazon Global Accelerator Remove Endpoints
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.TagResource'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.TagResource
+      operations:
+      - name: tagresource
+        method: POST
+        description: Amazon Global Accelerator Tag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UntagResource'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UntagResource
+      operations:
+      - name: untagresource
+        method: POST
+        description: Amazon Global Accelerator Untag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UpdateAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateAccelerator
+      operations:
+      - name: updateaccelerator
+        method: POST
+        description: Amazon Global Accelerator Update Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UpdateAcceleratorAttributes'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateAcceleratorAttributes
+      operations:
+      - name: updateacceleratorattributes
+        method: POST
+        description: Amazon Global Accelerator Update Accelerator Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingAccelerator'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingAccelerator
+      operations:
+      - name: updatecustomroutingaccelerator
+        method: POST
+        description: Amazon Global Accelerator Update Custom Routing Accelerator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingAcceleratorAttribut'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingAcceleratorAttributes
+      operations:
+      - name: updatecustomroutingacceleratorattributes
+        method: POST
+        description: Amazon Global Accelerator Update Custom Routing Accelerator Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingListener
+      operations:
+      - name: updatecustomroutinglistener
+        method: POST
+        description: Amazon Global Accelerator Update Custom Routing Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UpdateEndpointGroup'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateEndpointGroup
+      operations:
+      - name: updateendpointgroup
+        method: POST
+        description: Amazon Global Accelerator Update Endpoint Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.UpdateListener'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateListener
+      operations:
+      - name: updatelistener
+        method: POST
+        description: Amazon Global Accelerator Update Listener
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#X-Amz-Target=GlobalAccelerator_V20180706.WithdrawByoipCidr'
+      path: /#X-Amz-Target=GlobalAccelerator_V20180706.WithdrawByoipCidr
+      operations:
+      - name: withdrawbyoipcidr
+        method: POST
+        description: Amazon Global Accelerator Withdraw Byoip Cidr
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_GLOBAL_ACCELERATOR_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-global-accelerator-rest
+    port: 8080
+    description: REST adapter for AWS Global Accelerator. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints
+      name: x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.AddCustomRoutingEndpoints.'
+      operations:
+      - method: POST
+        name: addcustomroutingendpoints
+        description: Amazon Global Accelerator Add Custom Routing Endpoints
+        call: amazon-global-accelerator.addcustomroutingendpoints
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-addendpoints
+      name: x-amz-target-globalaccelerator-v20180706-addendpoints
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints.'
+      operations:
+      - method: POST
+        name: addendpoints
+        description: Amazon Global Accelerator Add Endpoints
+        call: amazon-global-accelerator.addendpoints
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr
+      name: x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.AdvertiseByoipCidr.'
+      operations:
+      - method: POST
+        name: advertisebyoipcidr
+        description: Amazon Global Accelerator Advertise Byoip Cidr
+        call: amazon-global-accelerator.advertisebyoipcidr
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic
+      name: x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.AllowCustomRoutingTraffic.'
+      operations:
+      - method: POST
+        name: allowcustomroutingtraffic
+        description: Amazon Global Accelerator Allow Custom Routing Traffic
+        call: amazon-global-accelerator.allowcustomroutingtraffic
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-createaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-createaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.CreateAccelerator.'
+      operations:
+      - method: POST
+        name: createaccelerator
+        description: Amazon Global Accelerator Create Accelerator
+        call: amazon-global-accelerator.createaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-createcustomroutingaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-createcustomroutingaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingAccelerator.'
+      operations:
+      - method: POST
+        name: createcustomroutingaccelerator
+        description: Amazon Global Accelerator Create Custom Routing Accelerator
+        call: amazon-global-accelerator.createcustomroutingaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup
+      name: x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup.'
+      operations:
+      - method: POST
+        name: createcustomroutingendpointgroup
+        description: Amazon Global Accelerator Create Custom Routing Endpoint Group
+        call: amazon-global-accelerator.createcustomroutingendpointgroup
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener
+      name: x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingListener.'
+      operations:
+      - method: POST
+        name: createcustomroutinglistener
+        description: Amazon Global Accelerator Create Custom Routing Listener
+        call: amazon-global-accelerator.createcustomroutinglistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-createendpointgroup
+      name: x-amz-target-globalaccelerator-v20180706-createendpointgroup
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.CreateEndpointGroup.'
+      operations:
+      - method: POST
+        name: createendpointgroup
+        description: Amazon Global Accelerator Create Endpoint Group
+        call: amazon-global-accelerator.createendpointgroup
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-createlistener
+      name: x-amz-target-globalaccelerator-v20180706-createlistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.CreateListener.'
+      operations:
+      - method: POST
+        name: createlistener
+        description: Amazon Global Accelerator Create Listener
+        call: amazon-global-accelerator.createlistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-deleteaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-deleteaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DeleteAccelerator.'
+      operations:
+      - method: POST
+        name: deleteaccelerator
+        description: Amazon Global Accelerator Delete Accelerator
+        call: amazon-global-accelerator.deleteaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingAccelerator.'
+      operations:
+      - method: POST
+        name: deletecustomroutingaccelerator
+        description: Amazon Global Accelerator Delete Custom Routing Accelerator
+        call: amazon-global-accelerator.deletecustomroutingaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-deletecustomroutingendpointgroup
+      name: x-amz-target-globalaccelerator-v20180706-deletecustomroutingendpointgroup
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingEndpointGroup.'
+      operations:
+      - method: POST
+        name: deletecustomroutingendpointgroup
+        description: Amazon Global Accelerator Delete Custom Routing Endpoint Group
+        call: amazon-global-accelerator.deletecustomroutingendpointgroup
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-deletecustomroutinglistener
+      name: x-amz-target-globalaccelerator-v20180706-deletecustomroutinglistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DeleteCustomRoutingListener.'
+      operations:
+      - method: POST
+        name: deletecustomroutinglistener
+        description: Amazon Global Accelerator Delete Custom Routing Listener
+        call: amazon-global-accelerator.deletecustomroutinglistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-deleteendpointgroup
+      name: x-amz-target-globalaccelerator-v20180706-deleteendpointgroup
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DeleteEndpointGroup.'
+      operations:
+      - method: POST
+        name: deleteendpointgroup
+        description: Amazon Global Accelerator Delete Endpoint Group
+        call: amazon-global-accelerator.deleteendpointgroup
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-deletelistener
+      name: x-amz-target-globalaccelerator-v20180706-deletelistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DeleteListener.'
+      operations:
+      - method: POST
+        name: deletelistener
+        description: Amazon Global Accelerator Delete Listener
+        call: amazon-global-accelerator.deletelistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-denycustomroutingtraffic
+      name: x-amz-target-globalaccelerator-v20180706-denycustomroutingtraffic
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DenyCustomRoutingTraffic.'
+      operations:
+      - method: POST
+        name: denycustomroutingtraffic
+        description: Amazon Global Accelerator Deny Custom Routing Traffic
+        call: amazon-global-accelerator.denycustomroutingtraffic
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-deprovisionbyoipcidr
+      name: x-amz-target-globalaccelerator-v20180706-deprovisionbyoipcidr
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DeprovisionByoipCidr.'
+      operations:
+      - method: POST
+        name: deprovisionbyoipcidr
+        description: Amazon Global Accelerator Deprovision Byoip Cidr
+        call: amazon-global-accelerator.deprovisionbyoipcidr
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describeaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-describeaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeAccelerator.'
+      operations:
+      - method: POST
+        name: describeaccelerator
+        description: Amazon Global Accelerator Describe Accelerator
+        call: amazon-global-accelerator.describeaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describeacceleratorattributes
+      name: x-amz-target-globalaccelerator-v20180706-describeacceleratorattributes
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeAcceleratorAttributes.'
+      operations:
+      - method: POST
+        name: describeacceleratorattributes
+        description: Amazon Global Accelerator Describe Accelerator Attributes
+        call: amazon-global-accelerator.describeacceleratorattributes
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describecustomroutingaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-describecustomroutingaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingAccelerator.'
+      operations:
+      - method: POST
+        name: describecustomroutingaccelerator
+        description: Amazon Global Accelerator Describe Custom Routing Accelerator
+        call: amazon-global-accelerator.describecustomroutingaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describecustomroutingacceleratorattributes
+      name: x-amz-target-globalaccelerator-v20180706-describecustomroutingacceleratorattrib
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingAcceleratorAttrib.'
+      operations:
+      - method: POST
+        name: describecustomroutingacceleratorattributes
+        description: Amazon Global Accelerator Describe Custom Routing Accelerator Attributes
+        call: amazon-global-accelerator.describecustomroutingacceleratorattributes
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describecustomroutingendpointgroup
+      name: x-amz-target-globalaccelerator-v20180706-describecustomroutingendpointgroup
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingEndpointGroup.'
+      operations:
+      - method: POST
+        name: describecustomroutingendpointgroup
+        description: Amazon Global Accelerator Describe Custom Routing Endpoint Group
+        call: amazon-global-accelerator.describecustomroutingendpointgroup
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describecustomroutinglistener
+      name: x-amz-target-globalaccelerator-v20180706-describecustomroutinglistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeCustomRoutingListener.'
+      operations:
+      - method: POST
+        name: describecustomroutinglistener
+        description: Amazon Global Accelerator Describe Custom Routing Listener
+        call: amazon-global-accelerator.describecustomroutinglistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describeendpointgroup
+      name: x-amz-target-globalaccelerator-v20180706-describeendpointgroup
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeEndpointGroup.'
+      operations:
+      - method: POST
+        name: describeendpointgroup
+        description: Amazon Global Accelerator Describe Endpoint Group
+        call: amazon-global-accelerator.describeendpointgroup
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-describelistener
+      name: x-amz-target-globalaccelerator-v20180706-describelistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.DescribeListener.'
+      operations:
+      - method: POST
+        name: describelistener
+        description: Amazon Global Accelerator Describe Listener
+        call: amazon-global-accelerator.describelistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listaccelerators
+      name: x-amz-target-globalaccelerator-v20180706-listaccelerators
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListAccelerators.'
+      operations:
+      - method: POST
+        name: listaccelerators
+        description: Amazon Global Accelerator List Accelerators
+        call: amazon-global-accelerator.listaccelerators
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listbyoipcidrs
+      name: x-amz-target-globalaccelerator-v20180706-listbyoipcidrs
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListByoipCidrs.'
+      operations:
+      - method: POST
+        name: listbyoipcidrs
+        description: Amazon Global Accelerator List Byoip Cidrs
+        call: amazon-global-accelerator.listbyoipcidrs
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listcustomroutingaccelerators
+      name: x-amz-target-globalaccelerator-v20180706-listcustomroutingaccelerators
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingAccelerators.'
+      operations:
+      - method: POST
+        name: listcustomroutingaccelerators
+        description: Amazon Global Accelerator List Custom Routing Accelerators
+        call: amazon-global-accelerator.listcustomroutingaccelerators
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listcustomroutingendpointgroups
+      name: x-amz-target-globalaccelerator-v20180706-listcustomroutingendpointgroups
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingEndpointGroups.'
+      operations:
+      - method: POST
+        name: listcustomroutingendpointgroups
+        description: Amazon Global Accelerator List Custom Routing Endpoint Groups
+        call: amazon-global-accelerator.listcustomroutingendpointgroups
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listcustomroutinglisteners
+      name: x-amz-target-globalaccelerator-v20180706-listcustomroutinglisteners
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingListeners.'
+      operations:
+      - method: POST
+        name: listcustomroutinglisteners
+        description: Amazon Global Accelerator List Custom Routing Listeners
+        call: amazon-global-accelerator.listcustomroutinglisteners
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappings
+      name: x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappings
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingPortMappings.'
+      operations:
+      - method: POST
+        name: listcustomroutingportmappings
+        description: Amazon Global Accelerator List Custom Routing Port Mappings
+        call: amazon-global-accelerator.listcustomroutingportmappings
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappingsbydestination
+      name: x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappingsbydestina
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListCustomRoutingPortMappingsByDestina.'
+      operations:
+      - method: POST
+        name: listcustomroutingportmappingsbydestination
+        description: Amazon Global Accelerator List Custom Routing Port Mappings by Destination
+        call: amazon-global-accelerator.listcustomroutingportmappingsbydestination
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listendpointgroups
+      name: x-amz-target-globalaccelerator-v20180706-listendpointgroups
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListEndpointGroups.'
+      operations:
+      - method: POST
+        name: listendpointgroups
+        description: Amazon Global Accelerator List Endpoint Groups
+        call: amazon-global-accelerator.listendpointgroups
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listlisteners
+      name: x-amz-target-globalaccelerator-v20180706-listlisteners
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListListeners.'
+      operations:
+      - method: POST
+        name: listlisteners
+        description: Amazon Global Accelerator List Listeners
+        call: amazon-global-accelerator.listlisteners
+        with:
+          MaxResults: rest.MaxResults
+          NextToken: rest.NextToken
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-listtagsforresource
+      name: x-amz-target-globalaccelerator-v20180706-listtagsforresource
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ListTagsForResource.'
+      operations:
+      - method: POST
+        name: listtagsforresource
+        description: Amazon Global Accelerator List Tags for Resource
+        call: amazon-global-accelerator.listtagsforresource
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-provisionbyoipcidr
+      name: x-amz-target-globalaccelerator-v20180706-provisionbyoipcidr
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.ProvisionByoipCidr.'
+      operations:
+      - method: POST
+        name: provisionbyoipcidr
+        description: Amazon Global Accelerator Provision Byoip Cidr
+        call: amazon-global-accelerator.provisionbyoipcidr
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-removecustomroutingendpoints
+      name: x-amz-target-globalaccelerator-v20180706-removecustomroutingendpoints
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.RemoveCustomRoutingEndpoints.'
+      operations:
+      - method: POST
+        name: removecustomroutingendpoints
+        description: Amazon Global Accelerator Remove Custom Routing Endpoints
+        call: amazon-global-accelerator.removecustomroutingendpoints
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-removeendpoints
+      name: x-amz-target-globalaccelerator-v20180706-removeendpoints
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.RemoveEndpoints.'
+      operations:
+      - method: POST
+        name: removeendpoints
+        description: Amazon Global Accelerator Remove Endpoints
+        call: amazon-global-accelerator.removeendpoints
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-tagresource
+      name: x-amz-target-globalaccelerator-v20180706-tagresource
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.TagResource.'
+      operations:
+      - method: POST
+        name: tagresource
+        description: Amazon Global Accelerator Tag Resource
+        call: amazon-global-accelerator.tagresource
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-untagresource
+      name: x-amz-target-globalaccelerator-v20180706-untagresource
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UntagResource.'
+      operations:
+      - method: POST
+        name: untagresource
+        description: Amazon Global Accelerator Untag Resource
+        call: amazon-global-accelerator.untagresource
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-updateaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-updateaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UpdateAccelerator.'
+      operations:
+      - method: POST
+        name: updateaccelerator
+        description: Amazon Global Accelerator Update Accelerator
+        call: amazon-global-accelerator.updateaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-updateacceleratorattributes
+      name: x-amz-target-globalaccelerator-v20180706-updateacceleratorattributes
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UpdateAcceleratorAttributes.'
+      operations:
+      - method: POST
+        name: updateacceleratorattributes
+        description: Amazon Global Accelerator Update Accelerator Attributes
+        call: amazon-global-accelerator.updateacceleratorattributes
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator
+      name: x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingAccelerator.'
+      operations:
+      - method: POST
+        name: updatecustomroutingaccelerator
+        description: Amazon Global Accelerator Update Custom Routing Accelerator
+        call: amazon-global-accelerator.updatecustomroutingaccelerator
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-updatecustomroutingacceleratorattributes
+      name: x-amz-target-globalaccelerator-v20180706-updatecustomroutingacceleratorattribut
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingAcceleratorAttribut.'
+      operations:
+      - method: POST
+        name: updatecustomroutingacceleratorattributes
+        description: Amazon Global Accelerator Update Custom Routing Accelerator Attributes
+        call: amazon-global-accelerator.updatecustomroutingacceleratorattributes
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-updatecustomroutinglistener
+      name: x-amz-target-globalaccelerator-v20180706-updatecustomroutinglistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UpdateCustomRoutingListener.'
+      operations:
+      - method: POST
+        name: updatecustomroutinglistener
+        description: Amazon Global Accelerator Update Custom Routing Listener
+        call: amazon-global-accelerator.updatecustomroutinglistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-updateendpointgroup
+      name: x-amz-target-globalaccelerator-v20180706-updateendpointgroup
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UpdateEndpointGroup.'
+      operations:
+      - method: POST
+        name: updateendpointgroup
+        description: Amazon Global Accelerator Update Endpoint Group
+        call: amazon-global-accelerator.updateendpointgroup
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-updatelistener
+      name: x-amz-target-globalaccelerator-v20180706-updatelistener
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.UpdateListener.'
+      operations:
+      - method: POST
+        name: updatelistener
+        description: Amazon Global Accelerator Update Listener
+        call: amazon-global-accelerator.updatelistener
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr
+      name: x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr
+      description: 'REST surface for #X-Amz-Target=GlobalAccelerator_V20180706.WithdrawByoipCidr.'
+      operations:
+      - method: POST
+        name: withdrawbyoipcidr
+        description: Amazon Global Accelerator Withdraw Byoip Cidr
+        call: amazon-global-accelerator.withdrawbyoipcidr
+        with:
+          X-Amz-Target: rest.X-Amz-Target
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-global-accelerator-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for AWS Global Accelerator. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: amazon-global-accelerator-add-custom
+      description: Amazon Global Accelerator Add Custom Routing Endpoints
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.addcustomroutingendpoints
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-add-endpoints
+      description: Amazon Global Accelerator Add Endpoints
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.addendpoints
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-advertise-byoip
+      description: Amazon Global Accelerator Advertise Byoip Cidr
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.advertisebyoipcidr
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-allow-custom
+      description: Amazon Global Accelerator Allow Custom Routing Traffic
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.allowcustomroutingtraffic
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-create-accelerator
+      description: Amazon Global Accelerator Create Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.createaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-create-custom
+      description: Amazon Global Accelerator Create Custom Routing Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.createcustomroutingaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-create-custom-2
+      description: Amazon Global Accelerator Create Custom Routing Endpoint Group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.createcustomroutingendpointgroup
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-create-custom-3
+      description: Amazon Global Accelerator Create Custom Routing Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.createcustomroutinglistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-create-endpoint
+      description: Amazon Global Accelerator Create Endpoint Group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.createendpointgroup
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-create-listener
+      description: Amazon Global Accelerator Create Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.createlistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-delete-accelerator
+      description: Amazon Global Accelerator Delete Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.deleteaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-delete-custom
+      description: Amazon Global Accelerator Delete Custom Routing Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.deletecustomroutingaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-delete-custom-2
+      description: Amazon Global Accelerator Delete Custom Routing Endpoint Group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.deletecustomroutingendpointgroup
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-delete-custom-3
+      description: Amazon Global Accelerator Delete Custom Routing Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.deletecustomroutinglistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-delete-endpoint
+      description: Amazon Global Accelerator Delete Endpoint Group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.deleteendpointgroup
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-delete-listener
+      description: Amazon Global Accelerator Delete Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.deletelistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-deny-custom
+      description: Amazon Global Accelerator Deny Custom Routing Traffic
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.denycustomroutingtraffic
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-deprovision-byoip
+      description: Amazon Global Accelerator Deprovision Byoip Cidr
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.deprovisionbyoipcidr
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-accelerator
+      description: Amazon Global Accelerator Describe Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describeaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-accelerator-2
+      description: Amazon Global Accelerator Describe Accelerator Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describeacceleratorattributes
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-custom
+      description: Amazon Global Accelerator Describe Custom Routing Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describecustomroutingaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-custom-2
+      description: Amazon Global Accelerator Describe Custom Routing Accelerator Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describecustomroutingacceleratorattributes
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-custom-3
+      description: Amazon Global Accelerator Describe Custom Routing Endpoint Group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describecustomroutingendpointgroup
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-custom-4
+      description: Amazon Global Accelerator Describe Custom Routing Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describecustomroutinglistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-endpoint
+      description: Amazon Global Accelerator Describe Endpoint Group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describeendpointgroup
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-describe-listener
+      description: Amazon Global Accelerator Describe Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.describelistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-accelerators
+      description: Amazon Global Accelerator List Accelerators
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listaccelerators
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-byoip
+      description: Amazon Global Accelerator List Byoip Cidrs
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listbyoipcidrs
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-custom
+      description: Amazon Global Accelerator List Custom Routing Accelerators
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listcustomroutingaccelerators
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-custom-2
+      description: Amazon Global Accelerator List Custom Routing Endpoint Groups
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listcustomroutingendpointgroups
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-custom-3
+      description: Amazon Global Accelerator List Custom Routing Listeners
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listcustomroutinglisteners
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-custom-4
+      description: Amazon Global Accelerator List Custom Routing Port Mappings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listcustomroutingportmappings
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-custom-5
+      description: Amazon Global Accelerator List Custom Routing Port Mappings by Destination
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listcustomroutingportmappingsbydestination
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-endpoint
+      description: Amazon Global Accelerator List Endpoint Groups
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listendpointgroups
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-listeners
+      description: Amazon Global Accelerator List Listeners
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listlisteners
+      with:
+        MaxResults: tools.MaxResults
+        NextToken: tools.NextToken
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-list-tags
+      description: Amazon Global Accelerator List Tags for Resource
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.listtagsforresource
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-provision-byoip
+      description: Amazon Global Accelerator Provision Byoip Cidr
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.provisionbyoipcidr
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-remove-custom
+      description: Amazon Global Accelerator Remove Custom Routing Endpoints
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.removecustomroutingendpoints
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-remove-endpoints
+      description: Amazon Global Accelerator Remove Endpoints
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.removeendpoints
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-tag-resource
+      description: Amazon Global Accelerator Tag Resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.tagresource
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-untag-resource
+      description: Amazon Global Accelerator Untag Resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.untagresource
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-update-accelerator
+      description: Amazon Global Accelerator Update Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.updateaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-update-accelerator-2
+      description: Amazon Global Accelerator Update Accelerator Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.updateacceleratorattributes
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-update-custom
+      description: Amazon Global Accelerator Update Custom Routing Accelerator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.updatecustomroutingaccelerator
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-update-custom-2
+      description: Amazon Global Accelerator Update Custom Routing Accelerator Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.updatecustomroutingacceleratorattributes
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-update-custom-3
+      description: Amazon Global Accelerator Update Custom Routing Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.updatecustomroutinglistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-update-endpoint
+      description: Amazon Global Accelerator Update Endpoint Group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.updateendpointgroup
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-update-listener
+      description: Amazon Global Accelerator Update Listener
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.updatelistener
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-global-accelerator-withdraw-byoip
+      description: Amazon Global Accelerator Withdraw Byoip Cidr
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-global-accelerator.withdrawbyoipcidr
+      with:
+        X-Amz-Target: tools.X-Amz-Target
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
