@@ -52,6 +52,12 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-global-accelerator-context.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/amazon-global-accelerator-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-global-accelerator-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-global-accelerator-authentication.yml
   - type: Portal
     url: https://console.aws.amazon.com/
   - type: Documentation
