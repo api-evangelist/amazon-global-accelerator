@@ -52,6 +52,8 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-global-accelerator-context.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-global-accelerator-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/amazon-global-accelerator-vulnerability-disclosure.yml
   - type: DomainSecurity
