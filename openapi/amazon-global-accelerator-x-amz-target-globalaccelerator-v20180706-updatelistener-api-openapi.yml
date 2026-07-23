@@ -1,0 +1,373 @@
+openapi: 3.0.0
+info:
+  version: '2018-08-08'
+  x-release: v4
+  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.UpdateListener API'
+  description: '<fullname>Global Accelerator</fullname> <p>This is the <i>Global Accelerator API Reference</i>. This guide is for developers who need detailed information about Global Accelerator API actions, data types, and errors. For more information about Global Accelerator features, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p> <p>Global Accelerator is a service in which you create <i>accelerators</i> to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose, you can gain additional benefits. </p> <ul> <li> <p>By using a standard accelerator, you can improve availability of your internet applications that are used by a global audience. With a standard accelerator, Global Accelerator directs traffic to optimal endpoints over the Amazon Web Services global network. </p> </li> <li> <p>For other scenarios, you might choose a custom routing accelerator. With a custom routing accelerator, you can use application logic to directly map one or more users to a specific endpoint among many endpoints.</p> </li> </ul> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important> <p>By default, Global Accelerator provides you with static IP addresses that you associate with your accelerator. The static IP addresses are anycast from the Amazon Web Services edge network. For IPv4, Global Accelerator provides two static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4 addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address ranges that you bring toGlobal Accelerator (BYOIP). </p> <p>For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in multiple Amazon Web Services Regions , which increases the availability of your applications. Endpoints for standard accelerators can be Network Load Balancers, Application Load Balancers, Amazon EC2 instances, or Elastic IP addresses that are located in one Amazon Web Services Region or multiple Amazon Web Services Regions. For custom routing accelerators, you map traffic that arrives to the static IP addresses to specific Amazon EC2 servers in endpoints that are virtual private cloud (VPC) subnets.</p> <important> <p>The static IP addresses remain assigned to your accelerator for as long as it exists, even if you disable the accelerator and it no longer accepts or routes traffic. However, when you <i>delete</i> an accelerator, you lose the static IP addresses that are assigned to it, so you can no longer route traffic by using them. You can use IAM policies like tag-based permissions with Global Accelerator to limit the users who have permissions to delete an accelerator. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/access-control-manage-access-tag-policies.html">Tag-based policies</a>.</p> </important> <p>For standard accelerators, Global Accelerator uses the Amazon Web Services global network to route traffic to the optimal regional endpoint based on health, client location, and policies that you configure. The service reacts instantly to changes in health or configuration to ensure that internet traffic from clients is always directed to healthy endpoints.</p> <p>For more information about understanding and using Global Accelerator, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p>'
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: globalaccelerator
+  x-aws-signingName: globalaccelerator
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/globalaccelerator-2018-08-08.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://globalaccelerator.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS Global Accelerator multi-region endpoint
+- url: https://globalaccelerator.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS Global Accelerator multi-region endpoint
+- url: http://globalaccelerator.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS Global Accelerator endpoint for China (Beijing) and China (Ningxia)
+- url: https://globalaccelerator.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS Global Accelerator endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=GlobalAccelerator V20180706.UpdateListener'
+paths:
+  /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateListener:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: UpdateListener
+      description: 'Update a listener. '
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateListenerResponse'
+              examples:
+                UpdateListener200Example:
+                  summary: Default UpdateListener 200 response
+                  x-microcks-default: true
+                  value:
+                    acceleratorArn: arn:aws:globalaccelerator::123456789012:accelerator/abc123
+                    status: DEPLOYED
+        '480':
+          description: InvalidArgumentException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArgumentException'
+              examples:
+                UpdateListener480Example:
+                  summary: Default UpdateListener 480 response
+                  x-microcks-default: true
+                  value:
+                    acceleratorArn: arn:aws:globalaccelerator::123456789012:accelerator/abc123
+                    status: DEPLOYED
+        '481':
+          description: InvalidPortRangeException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidPortRangeException'
+              examples:
+                UpdateListener481Example:
+                  summary: Default UpdateListener 481 response
+                  x-microcks-default: true
+                  value:
+                    acceleratorArn: arn:aws:globalaccelerator::123456789012:accelerator/abc123
+                    status: DEPLOYED
+        '482':
+          description: ListenerNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListenerNotFoundException'
+              examples:
+                UpdateListener482Example:
+                  summary: Default UpdateListener 482 response
+                  x-microcks-default: true
+                  value:
+                    acceleratorArn: arn:aws:globalaccelerator::123456789012:accelerator/abc123
+                    status: DEPLOYED
+        '483':
+          description: InternalServiceErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServiceErrorException'
+              examples:
+                UpdateListener483Example:
+                  summary: Default UpdateListener 483 response
+                  x-microcks-default: true
+                  value:
+                    acceleratorArn: arn:aws:globalaccelerator::123456789012:accelerator/abc123
+                    status: DEPLOYED
+        '484':
+          description: LimitExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LimitExceededException'
+              examples:
+                UpdateListener484Example:
+                  summary: Default UpdateListener 484 response
+                  x-microcks-default: true
+                  value:
+                    acceleratorArn: arn:aws:globalaccelerator::123456789012:accelerator/abc123
+                    status: DEPLOYED
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateListenerRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - GlobalAccelerator_V20180706.UpdateListener
+      summary: Amazon Global Accelerator Update Listener
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=GlobalAccelerator V20180706.UpdateListener'
+components:
+  schemas:
+    InvalidArgumentException: {}
+    Listener:
+      type: object
+      properties:
+        ListenerArn:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The Amazon Resource Name (ARN) of the listener.
+        PortRanges:
+          allOf:
+          - $ref: '#/components/schemas/PortRanges'
+          - description: The list of port ranges for the connections from clients to the accelerator.
+        Protocol:
+          allOf:
+          - $ref: '#/components/schemas/Protocol'
+          - description: The protocol for the connections from clients to the accelerator.
+        ClientAffinity:
+          allOf:
+          - $ref: '#/components/schemas/ClientAffinity'
+          - description: <p>Client affinity lets you direct all requests from a user to the same endpoint, if you have stateful applications, regardless of the port and protocol of the client request. Client affinity gives you control over whether to always route each client to the same specific endpoint.</p> <p>Global Accelerator uses a consistent-flow hashing algorithm to choose the optimal endpoint for a connection. If client affinity is <code>NONE</code>, Global Accelerator uses the "five-tuple" (5-tuple) properties—source IP address, source port, destination IP address, destination port, and protocol—to select the hash value, and then chooses the best endpoint. However, with this setting, if someone uses different ports to connect to Global Accelerator, their connections might not be always routed to the same endpoint because the hash value changes. </p> <p>If you want a given client to always be routed to the same endpoint, set client affinity to <code>SOURCE_IP</code> instead. When you use the <code>SOURCE_IP</code> setting, Global Accelerator uses the "two-tuple" (2-tuple) properties— source (client) IP address and destination IP address—to select the hash value.</p> <p>The default value is <code>NONE</code>.</p>
+      description: A complex type for a listener.
+    UpdateListenerResponse:
+      type: object
+      properties:
+        Listener:
+          allOf:
+          - $ref: '#/components/schemas/Listener'
+          - description: Information for the updated listener.
+    LimitExceededException: {}
+    Protocol:
+      type: string
+      enum:
+      - TCP
+      - UDP
+    GenericString:
+      type: string
+      maxLength: 255
+    ListenerNotFoundException: {}
+    ClientAffinity:
+      type: string
+      enum:
+      - NONE
+      - SOURCE_IP
+    UpdateListenerRequest:
+      type: object
+      required:
+      - ListenerArn
+      title: UpdateListenerRequest
+      properties:
+        ListenerArn:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The Amazon Resource Name (ARN) of the listener to update.
+        PortRanges:
+          allOf:
+          - $ref: '#/components/schemas/PortRanges'
+          - description: The updated list of port ranges for the connections from clients to the accelerator.
+        Protocol:
+          allOf:
+          - $ref: '#/components/schemas/Protocol'
+          - description: The updated protocol for the connections from clients to the accelerator.
+        ClientAffinity:
+          allOf:
+          - $ref: '#/components/schemas/ClientAffinity'
+          - description: <p>Client affinity lets you direct all requests from a user to the same endpoint, if you have stateful applications, regardless of the port and protocol of the client request. Client affinity gives you control over whether to always route each client to the same specific endpoint.</p> <p>Global Accelerator uses a consistent-flow hashing algorithm to choose the optimal endpoint for a connection. If client affinity is <code>NONE</code>, Global Accelerator uses the "five-tuple" (5-tuple) properties—source IP address, source port, destination IP address, destination port, and protocol—to select the hash value, and then chooses the best endpoint. However, with this setting, if someone uses different ports to connect to Global Accelerator, their connections might not be always routed to the same endpoint because the hash value changes. </p> <p>If you want a given client to always be routed to the same endpoint, set client affinity to <code>SOURCE_IP</code> instead. When you use the <code>SOURCE_IP</code> setting, Global Accelerator uses the "two-tuple" (2-tuple) properties— source (client) IP address and destination IP address—to select the hash value.</p> <p>The default value is <code>NONE</code>.</p>
+    PortRanges:
+      type: array
+      items:
+        $ref: '#/components/schemas/PortRange'
+      minItems: 1
+      maxItems: 10
+    PortRange:
+      type: object
+      properties:
+        FromPort:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The first port in the range of ports, inclusive.
+        ToPort:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The last port in the range of ports, inclusive.
+      description: A complex type for a range of ports for a listener.
+    InternalServiceErrorException: {}
+    PortNumber:
+      type: integer
+      minimum: 1
+      maximum: 65535
+    InvalidPortRangeException: {}
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/globalaccelerator/
+x-hasEquivalentPaths: true
