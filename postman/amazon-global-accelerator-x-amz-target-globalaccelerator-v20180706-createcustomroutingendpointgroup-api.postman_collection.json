@@ -1,0 +1,926 @@
+{
+  "info": {
+    "_postman_id": "df6fe204-de23-4275-af0a-68516a5324f6",
+    "name": "AWS Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup API",
+    "description": "<fullname>Global Accelerator</fullname> <p>This is the <i>Global Accelerator API Reference</i>. This guide is for developers who need detailed information about Global Accelerator API actions, data types, and errors. For more information about Global Accelerator features, see the <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html\">Global Accelerator Developer Guide</a>.</p> <p>Global Accelerator is a service in which you create <i>accelerators</i> to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose, you can gain additional benefits. </p> <ul> <li> <p>By using a standard accelerator, you can improve availability of your internet applications that are used by a global audience. With a standard accelerator, Global Accelerator directs traffic to optimal endpoints over the Amazon Web Services global network. </p> </li> <li> <p>For other scenarios, you might choose a custom routing accelerator. With a custom routing accelerator, you can use application logic to directly map one or more users to a specific endpoint among many endpoints.</p> </li> </ul> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important> <p>By default, Global Accelerator provides you with static IP addresses that you associate with your accelerator. The static IP addresses are anycast from the Amazon Web Services edge network. For IPv4, Global Accelerator provides two static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4 addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address ranges that you bring toGlobal Accelerator (BYOIP). </p> <p>For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in multiple Amazon Web Services Regions , which increases the availability of your applications. Endpoints for standard accelerators can be Network Load Balancers, Application Load Balancers, Amazon EC2 instances, or Elastic IP addresses that are located in one Amazon Web Services Region or multiple Amazon Web Services Regions. For custom routing accelerators, you map traffic that arrives to the static IP addresses to specific Amazon EC2 servers in endpoints that are virtual private cloud (VPC) subnets.</p> <important> <p>The static IP addresses remain assigned to your accelerator for as long as it exists, even if you disable the accelerator and it no longer accepts or routes traffic. However, when you <i>delete</i> an accelerator, you lose the static IP addresses that are assigned to it, so you can no longer route traffic by using them. You can use IAM policies like tag-based permissions with Global Accelerator to limit the users who have permissions to delete an accelerator. For more information, see <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/access-control-manage-access-tag-policies.html\">Tag-based policies</a>.</p> </important> <p>For standard accelerators, Global Accelerator uses the Amazon Web Services global network to route traffic to the optimal regional endpoint based on health, client location, and policies that you configure. The service reacts instantly to changes in health or configuration to ensure that internet traffic from clients is always directed to healthy endpoints.</p> <p>For more information about understanding and using Global Accelerator, see the <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html\">Global Accelerator Developer Guide</a>.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:22:23.000Z",
+    "updatedAt": "2026-07-28T10:22:23.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-df6fe204-de23-4275-af0a-68516a5324f6"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+      "item": [
+        {
+          "name": "Amazon Global Accelerator Create Custom Routing Endpoint Group",
+          "id": "a4ab3f30-5657-4cf9-9883-35d520cc182b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+            },
+            "description": "Create an endpoint group for the specified listener for a custom routing accelerator. An endpoint group is a collection of endpoints in one Amazon Web Services Region. "
+          },
+          "response": [
+            {
+              "id": "5933e90a-a940-4470-a201-5c901c38c431",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"EndpointGroup\": {\n    \"EndpointGroupArn\": \"<string>\",\n    \"EndpointGroupRegion\": \"<string>\",\n    \"DestinationDescriptions\": [\n      {\n        \"FromPort\": \"<integer>\",\n        \"ToPort\": \"<integer>\",\n        \"Protocols\": [\n          \"TCP\",\n          \"UDP\"\n        ]\n      },\n      {\n        \"FromPort\": \"<integer>\",\n        \"ToPort\": \"<integer>\",\n        \"Protocols\": [\n          \"TCP\",\n          \"TCP\"\n        ]\n      }\n    ],\n    \"EndpointDescriptions\": [\n      {\n        \"EndpointId\": \"<string>\"\n      },\n      {\n        \"EndpointId\": \"<string>\"\n      }\n    ]\n  }\n}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-5933e90a-a940-4470-a201-5c901c38c431"
+            },
+            {
+              "id": "021fc4c3-1f50-457e-b4ef-0e8dcf5bb481",
+              "name": "AcceleratorNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-021fc4c3-1f50-457e-b4ef-0e8dcf5bb481"
+            },
+            {
+              "id": "4a97b8b6-8147-4a63-b146-d340e52aab54",
+              "name": "EndpointGroupAlreadyExistsException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-4a97b8b6-8147-4a63-b146-d340e52aab54"
+            },
+            {
+              "id": "40eaddc7-215e-4dcb-8ecb-eb03d8414fe5",
+              "name": "ListenerNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-40eaddc7-215e-4dcb-8ecb-eb03d8414fe5"
+            },
+            {
+              "id": "da5eb746-58fb-475b-863c-7835142bac9b",
+              "name": "InternalServiceErrorException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-da5eb746-58fb-475b-863c-7835142bac9b"
+            },
+            {
+              "id": "dbbd0cc8-14e6-4a10-937a-f01f9cba3530",
+              "name": "InvalidArgumentException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-dbbd0cc8-14e6-4a10-937a-f01f9cba3530"
+            },
+            {
+              "id": "f22a9441-e419-4b4a-a480-70f5aadae35e",
+              "name": "InvalidPortRangeException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-f22a9441-e419-4b4a-a480-70f5aadae35e"
+            },
+            {
+              "id": "cdb3335b-78d7-4d9a-accf-a80cfb07d42d",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-cdb3335b-78d7-4d9a-accf-a80cfb07d42d"
+            },
+            {
+              "id": "4c2d4cbe-fe14-4505-a379-8a422f367211",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ListenerArn\": \"<string>\",\n  \"EndpointGroupRegion\": \"<string>\",\n  \"DestinationConfigurations\": [\n    {\n      \"FromPort\": \"<integer>\",\n      \"ToPort\": \"<integer>\",\n      \"Protocols\": [\n        \"TCP\"\n      ]\n    }\n  ],\n  \"IdempotencyToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.CreateCustomRoutingEndpointGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:22:23.000Z",
+              "updatedAt": "2026-07-28T10:22:23.000Z",
+              "uid": "35240-4c2d4cbe-fe14-4505-a379-8a422f367211"
+            }
+          ],
+          "createdAt": "2026-07-28T10:22:23.000Z",
+          "updatedAt": "2026-07-28T10:22:23.000Z",
+          "uid": "35240-a4ab3f30-5657-4cf9-9883-35d520cc182b"
+        }
+      ],
+      "id": "cd78edbb-0b22-40fe-92a8-6e6b61a50748",
+      "createdAt": "2026-07-28T10:22:23.000Z",
+      "updatedAt": "2026-07-28T10:22:23.000Z",
+      "uid": "35240-cd78edbb-0b22-40fe-92a8-6e6b61a50748"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://globalaccelerator.{{region}}.amazonaws.com"
+    }
+  ]
+}
