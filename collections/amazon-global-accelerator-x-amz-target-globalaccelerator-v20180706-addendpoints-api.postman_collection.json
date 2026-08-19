@@ -1,0 +1,905 @@
+{
+  "item": [
+    {
+      "id": "f507c758-a883-4135-a773-3514ddb5ead0",
+      "name": "#X Amz Target=GlobalAccelerator V20180706.AddEndpoints",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7b261d00-5a71-4b62-a616-5d7fc49ec61a",
+          "name": "Amazon Global Accelerator Add Endpoints",
+          "request": {
+            "name": "Amazon Global Accelerator Add Endpoints",
+            "description": {
+              "content": "<p>Add endpoints to an endpoint group. The <code>AddEndpoints</code> API operation is the recommended option for adding endpoints. The alternative options are to add endpoints when you create an endpoint group (with the <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/api/API_CreateEndpointGroup.html\">CreateEndpointGroup</a> API) or when you update an endpoint group (with the <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/api/API_UpdateEndpointGroup.html\">UpdateEndpointGroup</a> API). </p> <p>There are two advantages to using <code>AddEndpoints</code> to add endpoints:</p> <ul> <li> <p>It's faster, because Global Accelerator only has to resolve the new endpoints that you're adding.</p> </li> <li> <p>It's more convenient, because you don't need to specify all of the current endpoints that are already in the endpoint group in addition to the new endpoints that you want to add.</p> </li> </ul>",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "966506ac-5ed0-421c-83f5-75bbca09b26f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"acceleratorArn\": \"arn:aws:globalaccelerator::123456789012:accelerator/abc123\",\n  \"status\": \"DEPLOYED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "111bbeb7-2474-4944-b13a-a21fb04553b2",
+              "name": "TransactionInProgressException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"acceleratorArn\": \"arn:aws:globalaccelerator::123456789012:accelerator/abc123\",\n  \"status\": \"DEPLOYED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d0f98253-9ec0-4beb-8ee7-7864ec68472d",
+              "name": "EndpointGroupNotFoundException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"acceleratorArn\": \"arn:aws:globalaccelerator::123456789012:accelerator/abc123\",\n  \"status\": \"DEPLOYED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d86f8db4-673f-4a1d-9c58-d495a996fead",
+              "name": "InternalServiceErrorException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 482,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"acceleratorArn\": \"arn:aws:globalaccelerator::123456789012:accelerator/abc123\",\n  \"status\": \"DEPLOYED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "989c0a68-556d-4157-9593-c9320805689e",
+              "name": "InvalidArgumentException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 483,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"acceleratorArn\": \"arn:aws:globalaccelerator::123456789012:accelerator/abc123\",\n  \"status\": \"DEPLOYED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8154cb69-ba9a-4079-9a78-8cf3dbdbd0f1",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 484,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"acceleratorArn\": \"arn:aws:globalaccelerator::123456789012:accelerator/abc123\",\n  \"status\": \"DEPLOYED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "34cdd070-2ce5-492f-accf-c058d108f6bb",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=GlobalAccelerator_V20180706.AddEndpoints",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"EndpointConfigurations\": [\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    },\n    {\n      \"EndpointId\": \"<string>\",\n      \"Weight\": \"<integer>\",\n      \"ClientIPPreservationEnabled\": \"<boolean>\"\n    }\n  ],\n  \"EndpointGroupArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 485,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"acceleratorArn\": \"arn:aws:globalaccelerator::123456789012:accelerator/abc123\",\n  \"status\": \"DEPLOYED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "http://globalaccelerator.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "318f51e2-474c-46c2-9f18-8710bd9e7ca3",
+    "name": "AWS Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddEndpoints API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "<fullname>Global Accelerator</fullname> <p>This is the <i>Global Accelerator API Reference</i>. This guide is for developers who need detailed information about Global Accelerator API actions, data types, and errors. For more information about Global Accelerator features, see the <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html\">Global Accelerator Developer Guide</a>.</p> <p>Global Accelerator is a service in which you create <i>accelerators</i> to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose, you can gain additional benefits. </p> <ul> <li> <p>By using a standard accelerator, you can improve availability of your internet applications that are used by a global audience. With a standard accelerator, Global Accelerator directs traffic to optimal endpoints over the Amazon Web Services global network. </p> </li> <li> <p>For other scenarios, you might choose a custom routing accelerator. With a custom routing accelerator, you can use application logic to directly map one or more users to a specific endpoint among many endpoints.</p> </li> </ul> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important> <p>By default, Global Accelerator provides you with static IP addresses that you associate with your accelerator. The static IP addresses are anycast from the Amazon Web Services edge network. For IPv4, Global Accelerator provides two static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4 addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address ranges that you bring toGlobal Accelerator (BYOIP). </p> <p>For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in multiple Amazon Web Services Regions , which increases the availability of your applications. Endpoints for standard accelerators can be Network Load Balancers, Application Load Balancers, Amazon EC2 instances, or Elastic IP addresses that are located in one Amazon Web Services Region or multiple Amazon Web Services Regions. For custom routing accelerators, you map traffic that arrives to the static IP addresses to specific Amazon EC2 servers in endpoints that are virtual private cloud (VPC) subnets.</p> <important> <p>The static IP addresses remain assigned to your accelerator for as long as it exists, even if you disable the accelerator and it no longer accepts or routes traffic. However, when you <i>delete</i> an accelerator, you lose the static IP addresses that are assigned to it, so you can no longer route traffic by using them. You can use IAM policies like tag-based permissions with Global Accelerator to limit the users who have permissions to delete an accelerator. For more information, see <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/access-control-manage-access-tag-policies.html\">Tag-based policies</a>.</p> </important> <p>For standard accelerators, Global Accelerator uses the Amazon Web Services global network to route traffic to the optimal regional endpoint based on health, client location, and policies that you configure. The service reacts instantly to changes in health or configuration to ensure that internet traffic from clients is always directed to healthy endpoints.</p> <p>For more information about understanding and using Global Accelerator, see the <a href=\"https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html\">Global Accelerator Developer Guide</a>.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+      "type": "text/plain"
+    }
+  }
+}
