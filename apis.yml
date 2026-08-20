@@ -41,7 +41,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.addcustomroutingendpoints.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints'
   properties:
   - type: OpenAPI
@@ -133,7 +134,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.allowcustomroutingtraffic.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.AllowCustomRoutingTraffic'
   properties:
   - type: OpenAPI
@@ -196,7 +198,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutingaccelerator.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
@@ -228,7 +231,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutingendpointgroup.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup'
   properties:
   - type: OpenAPI
@@ -259,7 +263,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutinglistener.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener'
   properties:
   - type: OpenAPI
@@ -290,7 +295,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.createendpointgroup.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup'
   properties:
   - type: OpenAPI
@@ -383,7 +389,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutingaccelerator.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
@@ -415,7 +422,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutingendpointgroup.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingEndpointGroup'
   properties:
   - type: OpenAPI
@@ -446,7 +454,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutinglistener.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingListener'
   properties:
   - type: OpenAPI
@@ -477,7 +486,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.deleteendpointgroup.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteEndpointGroup'
   properties:
   - type: OpenAPI
@@ -538,7 +548,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.denycustomroutingtraffic.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DenyCustomRoutingTraffic'
   properties:
   - type: OpenAPI
@@ -569,7 +580,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.deprovisionbyoipcidr.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DeprovisionByoipCidr'
   properties:
   - type: OpenAPI
@@ -600,7 +612,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeaccelerator.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeAccelerator'
   properties:
   - type: OpenAPI
@@ -632,7 +645,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeacceleratorattributes.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeAcceleratorAttributes'
   properties:
   - type: OpenAPI
@@ -664,7 +678,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingaccelerator.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
@@ -696,7 +711,8 @@ apis:
     Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingacceleratorattributes.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAcceleratorAttributes'
   properties:
   - type: OpenAPI
@@ -728,7 +744,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingendpointgroup.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingEndpointGroup'
   properties:
   - type: OpenAPI
@@ -760,7 +777,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutinglistener.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingListener'
   properties:
   - type: OpenAPI
@@ -791,7 +809,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeendpointgroup.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeEndpointGroup'
   properties:
   - type: OpenAPI
@@ -913,7 +932,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingaccelerators.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingAccelerators'
   properties:
   - type: OpenAPI
@@ -945,7 +965,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingendpointgroups.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingEndpointGroups'
   properties:
   - type: OpenAPI
@@ -976,7 +997,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutinglisteners.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingListeners'
   properties:
   - type: OpenAPI
@@ -1008,7 +1030,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingportmappings.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappings'
   properties:
   - type: OpenAPI
@@ -1040,7 +1063,8 @@ apis:
     Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingportmappingsbydestination.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappingsByDestination'
   properties:
   - type: OpenAPI
@@ -1132,7 +1156,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.listtagsforresource.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.ListTagsForResource'
   properties:
   - type: OpenAPI
@@ -1194,7 +1219,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.removecustomroutingendpoints.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.RemoveCustomRoutingEndpoints'
   properties:
   - type: OpenAPI
@@ -1346,7 +1372,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateacceleratorattributes.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateAcceleratorAttributes'
   properties:
   - type: OpenAPI
@@ -1378,7 +1405,8 @@ apis:
     Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutingaccelerator.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
@@ -1410,7 +1438,8 @@ apis:
     Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutingacceleratorattributes.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAcceleratorAttributes'
   properties:
   - type: OpenAPI
@@ -1441,7 +1470,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutinglistener.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingListener'
   properties:
   - type: OpenAPI
@@ -1472,7 +1502,8 @@ apis:
     — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateendpointgroup.
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateEndpointGroup'
   properties:
   - type: OpenAPI
