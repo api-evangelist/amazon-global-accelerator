@@ -4,6 +4,18 @@ description: >-
   Amazon Global Accelerator is a networking service that improves the performance and availability of applications with
   local or global users. It provides static IP addresses that act as a fixed entry point to your applications and uses
   the AWS global network to optimize the path from users to applications, improving performance by up to 60%.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
