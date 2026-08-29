@@ -1599,6 +1599,9 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-global-accelerator-capability-edges.yml
+    name: Amazon Global Accelerator Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-global-accelerator/overview
   - type: AgenticAccess
