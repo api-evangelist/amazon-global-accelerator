@@ -1,9 +1,9 @@
 aid: amazon-global-accelerator
 name: Amazon Global Accelerator
-description: >-
-  Amazon Global Accelerator is a networking service that improves the performance and availability of applications with
-  local or global users. It provides static IP addresses that act as a fixed entry point to your applications and uses
-  the AWS global network to optimize the path from users to applications, improving performance by up to 60%.
+description: Amazon Global Accelerator is a networking service that improves the performance and availability
+  of applications with local or global users. It provides static IP addresses that act as a fixed entry
+  point to your applications and uses the AWS global network to optimize the path from users to applications,
+  improving performance by up to 60%.
 deliveryModel:
   model: saas
   open_source: false
@@ -34,24 +34,22 @@ image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.p
 url: https://raw.githubusercontent.com/api-evangelist/amazon-global-accelerator/refs/heads/main/apis.yml
 type: Index
 created: '2024-01-15'
-modified: '2026-05-19'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 tags:
-  - Availability
-  - AWS
-  - CDN
-  - Global
-  - Load Balancing
-  - Networking
-  - Performance
+- Availability
+- AWS
+- CDN
+- Global
+- Load Balancing
+- Networking
+- Performance
 apis:
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.addcustomroutingendpoints.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.addcustomroutingendpoints.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -59,8 +57,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -77,20 +74,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addendpoints-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addendpoints-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddEndpoints API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.AddEndpoints API from Amazon Global Accelerator — 1
-    operation(s) for #x amz target=globalaccelerator v20180706.addendpoints.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.AddEndpoints API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.addendpoints.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.AddEndpoints'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addendpoints-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addendpoints-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -107,21 +101,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AdvertiseByoipCidr API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.AdvertiseByoipCidr API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.advertisebyoipcidr.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AdvertiseByoipCidr API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.AdvertiseByoipCidr API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.advertisebyoipcidr.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.AdvertiseByoipCidr'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -138,13 +128,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AllowCustomRoutingTraffic API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.AllowCustomRoutingTraffic API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.allowcustomroutingtraffic.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AllowCustomRoutingTraffic
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.AllowCustomRoutingTraffic API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.allowcustomroutingtraffic.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -152,8 +140,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.AllowCustomRoutingTraffic'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -170,21 +157,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateAccelerator API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.CreateAccelerator API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.createaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateAccelerator API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.CreateAccelerator API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -201,14 +184,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingAccelerator
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingAccelerator API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutingaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingAccelerator
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingAccelerator API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutingaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -216,8 +196,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -234,14 +213,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutingendpointgroup.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutingendpointgroup.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -249,8 +225,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -267,13 +242,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutinglistener.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createcustomroutinglistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -281,8 +254,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -299,13 +271,10 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createendpointgroup-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.createendpointgroup.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createendpointgroup-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.createendpointgroup.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -313,8 +282,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createendpointgroup-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createendpointgroup-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -331,20 +299,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createlistener-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createlistener-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.CreateListener API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.CreateListener API from Amazon Global Accelerator —
-    1 operation(s) for #x amz target=globalaccelerator v20180706.createlistener.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.CreateListener API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.createlistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.CreateListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createlistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createlistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -361,21 +326,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteAccelerator API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DeleteAccelerator API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.deleteaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteAccelerator API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DeleteAccelerator API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deleteaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -392,14 +353,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingAccelerator
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingAccelerator API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutingaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingAccelerator
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingAccelerator API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutingaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -407,8 +365,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -425,14 +382,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingendpointgroup-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingEndpointGroup
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingEndpointGroup API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutingendpointgroup.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingendpointgroup-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingEndpointGroup
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingEndpointGroup API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutingendpointgroup.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -440,8 +394,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingEndpointGroup'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingendpointgroup-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingendpointgroup-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -458,13 +411,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutinglistener-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingListener API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingListener API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutinglistener.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutinglistener-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingListener
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingListener API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletecustomroutinglistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -472,8 +423,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutinglistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutinglistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -490,13 +440,10 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteendpointgroup-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteEndpointGroup API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DeleteEndpointGroup API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.deleteendpointgroup.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteendpointgroup-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteEndpointGroup API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DeleteEndpointGroup API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deleteendpointgroup.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -504,8 +451,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteEndpointGroup'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteendpointgroup-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteendpointgroup-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -522,20 +468,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletelistener-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletelistener-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeleteListener API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DeleteListener API from Amazon Global Accelerator —
-    1 operation(s) for #x amz target=globalaccelerator v20180706.deletelistener.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DeleteListener API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.deletelistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.DeleteListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletelistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletelistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -552,13 +495,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-denycustomroutingtraffic-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DenyCustomRoutingTraffic API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DenyCustomRoutingTraffic API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.denycustomroutingtraffic.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-denycustomroutingtraffic-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DenyCustomRoutingTraffic
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DenyCustomRoutingTraffic API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.denycustomroutingtraffic.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -566,8 +507,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DenyCustomRoutingTraffic'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-denycustomroutingtraffic-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-denycustomroutingtraffic-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -584,13 +524,10 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deprovisionbyoipcidr-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeprovisionByoipCidr API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DeprovisionByoipCidr API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.deprovisionbyoipcidr.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deprovisionbyoipcidr-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DeprovisionByoipCidr API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DeprovisionByoipCidr API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.deprovisionbyoipcidr.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -598,8 +535,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DeprovisionByoipCidr'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deprovisionbyoipcidr-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deprovisionbyoipcidr-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -616,13 +552,10 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeAccelerator API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeAccelerator API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeAccelerator API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeAccelerator API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -630,8 +563,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -648,14 +580,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeacceleratorattributes-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeAcceleratorAttributes
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeAcceleratorAttributes API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeacceleratorattributes.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeacceleratorattributes-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeAcceleratorAttributes
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeAcceleratorAttributes API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeacceleratorattributes.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -663,8 +592,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeAcceleratorAttributes'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeacceleratorattributes-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeacceleratorattributes-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -681,14 +609,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAccelerator
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAccelerator API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAccelerator
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAccelerator API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -696,8 +621,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -714,14 +638,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingacceleratorattributes-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAcceleratorAttributes
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAcceleratorAttributes API from
-    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingacceleratorattributes.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingacceleratorattributes-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAcceleratorAttributes
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAcceleratorAttributes
+    API from Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingacceleratorattributes.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -729,8 +650,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingAcceleratorAttributes'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingacceleratorattributes-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingacceleratorattributes-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -747,14 +667,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingendpointgroup-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingEndpointGroup
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingEndpointGroup API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingendpointgroup.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingendpointgroup-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingEndpointGroup
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingEndpointGroup API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutingendpointgroup.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -762,8 +679,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingEndpointGroup'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingendpointgroup-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingendpointgroup-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -780,14 +696,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutinglistener-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingListener
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingListener API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutinglistener.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutinglistener-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingListener
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingListener API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describecustomroutinglistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -795,8 +708,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeCustomRoutingListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutinglistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutinglistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -813,13 +725,10 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeendpointgroup-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeEndpointGroup API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeEndpointGroup API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeendpointgroup.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeendpointgroup-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeEndpointGroup API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeEndpointGroup API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describeendpointgroup.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -827,8 +736,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeEndpointGroup'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeendpointgroup-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeendpointgroup-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -845,20 +753,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describelistener-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describelistener-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.DescribeListener API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.DescribeListener API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.describelistener.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.DescribeListener API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.describelistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.DescribeListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describelistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describelistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -875,20 +780,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listaccelerators-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listaccelerators-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListAccelerators API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListAccelerators API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.listaccelerators.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListAccelerators API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listaccelerators.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.ListAccelerators'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listaccelerators-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listaccelerators-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -905,20 +807,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listbyoipcidrs-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listbyoipcidrs-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListByoipCidrs API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListByoipCidrs API from Amazon Global Accelerator —
-    1 operation(s) for #x amz target=globalaccelerator v20180706.listbyoipcidrs.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListByoipCidrs API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.listbyoipcidrs.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.ListByoipCidrs'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listbyoipcidrs-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listbyoipcidrs-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -935,14 +834,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingaccelerators-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingAccelerators
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingAccelerators API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingaccelerators.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingaccelerators-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingAccelerators
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingAccelerators API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingaccelerators.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -950,8 +846,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingAccelerators'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingaccelerators-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingaccelerators-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -968,14 +863,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingendpointgroups-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingEndpointGroups
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingEndpointGroups API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingendpointgroups.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingendpointgroups-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingEndpointGroups
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingEndpointGroups API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingendpointgroups.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -983,8 +875,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingEndpointGroups'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingendpointgroups-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingendpointgroups-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1001,13 +892,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutinglisteners-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingListeners API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingListeners API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutinglisteners.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutinglisteners-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingListeners
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingListeners API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutinglisteners.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1015,8 +904,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingListeners'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutinglisteners-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutinglisteners-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1033,14 +921,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappings-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappings
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappings API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingportmappings.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappings-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappings
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappings API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingportmappings.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1048,8 +933,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappings'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappings-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappings-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1066,14 +950,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappingsbydestination-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappingsByDestination
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappingsByDestination API from
-    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingportmappingsbydestination.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappingsbydestination-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappingsByDestination
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappingsByDestination
+    API from Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listcustomroutingportmappingsbydestination.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1081,8 +962,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.ListCustomRoutingPortMappingsByDestination'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappingsbydestination-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappingsbydestination-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1099,21 +979,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listendpointgroups-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListEndpointGroups API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListEndpointGroups API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.listendpointgroups.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listendpointgroups-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListEndpointGroups API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListEndpointGroups API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listendpointgroups.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.ListEndpointGroups'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listendpointgroups-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listendpointgroups-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1130,20 +1006,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listlisteners-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listlisteners-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListListeners API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListListeners API from Amazon Global Accelerator — 1
-    operation(s) for #x amz target=globalaccelerator v20180706.listlisteners.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListListeners API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.listlisteners.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.ListListeners'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listlisteners-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listlisteners-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1160,13 +1033,10 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listtagsforresource-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListTagsForResource API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ListTagsForResource API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.listtagsforresource.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listtagsforresource-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ListTagsForResource API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ListTagsForResource API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.listtagsforresource.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1174,8 +1044,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.ListTagsForResource'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listtagsforresource-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listtagsforresource-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1192,21 +1061,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-provisionbyoipcidr-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.provisionbyoipcidr.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-provisionbyoipcidr-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.provisionbyoipcidr.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-provisionbyoipcidr-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-provisionbyoipcidr-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1223,13 +1088,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removecustomroutingendpoints-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.RemoveCustomRoutingEndpoints API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.RemoveCustomRoutingEndpoints API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.removecustomroutingendpoints.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removecustomroutingendpoints-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.RemoveCustomRoutingEndpoints
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.RemoveCustomRoutingEndpoints API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.removecustomroutingendpoints.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1237,8 +1100,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.RemoveCustomRoutingEndpoints'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removecustomroutingendpoints-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removecustomroutingendpoints-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1255,20 +1117,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removeendpoints-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removeendpoints-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.RemoveEndpoints API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.RemoveEndpoints API from Amazon Global Accelerator —
-    1 operation(s) for #x amz target=globalaccelerator v20180706.removeendpoints.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.RemoveEndpoints API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.removeendpoints.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.RemoveEndpoints'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removeendpoints-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removeendpoints-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1285,20 +1144,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-tagresource-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-tagresource-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.TagResource API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.TagResource API from Amazon Global Accelerator — 1 operation(s)
-    for #x amz target=globalaccelerator v20180706.tagresource.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.TagResource API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.tagresource.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.TagResource'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-tagresource-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-tagresource-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1315,20 +1171,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-untagresource-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-untagresource-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UntagResource API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UntagResource API from Amazon Global Accelerator — 1
-    operation(s) for #x amz target=globalaccelerator v20180706.untagresource.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UntagResource API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.untagresource.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.UntagResource'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-untagresource-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-untagresource-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1345,21 +1198,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateAccelerator API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UpdateAccelerator API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateAccelerator API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UpdateAccelerator API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1376,13 +1225,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateacceleratorattributes-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateAcceleratorAttributes API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UpdateAcceleratorAttributes API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateacceleratorattributes.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateacceleratorattributes-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateAcceleratorAttributes
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UpdateAcceleratorAttributes API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateacceleratorattributes.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1390,8 +1237,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateAcceleratorAttributes'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateacceleratorattributes-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateacceleratorattributes-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1408,14 +1254,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAccelerator
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAccelerator API from Amazon Global
-    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutingaccelerator.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAccelerator
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAccelerator API from
+    Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutingaccelerator.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1423,8 +1266,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAccelerator'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1441,14 +1283,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingacceleratorattributes-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAcceleratorAttributes
-    API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAcceleratorAttributes API from Amazon
-    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutingacceleratorattributes.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingacceleratorattributes-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAcceleratorAttributes
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAcceleratorAttributes
+    API from Amazon Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutingacceleratorattributes.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1456,8 +1295,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAcceleratorAttributes'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingacceleratorattributes-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingacceleratorattributes-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1474,13 +1312,11 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutinglistener-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingListener API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingListener API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutinglistener.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutinglistener-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingListener
+    API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingListener API from Amazon
+    Global Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatecustomroutinglistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1488,8 +1324,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutinglistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutinglistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1506,13 +1341,10 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateendpointgroup-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateEndpointGroup API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UpdateEndpointGroup API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateendpointgroup.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateendpointgroup-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateEndpointGroup API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UpdateEndpointGroup API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.updateendpointgroup.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags: []
@@ -1520,8 +1352,7 @@ apis:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateEndpointGroup'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateendpointgroup-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateendpointgroup-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1538,20 +1369,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatelistener-api
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatelistener-api
   name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.UpdateListener API'
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.UpdateListener API from Amazon Global Accelerator —
-    1 operation(s) for #x amz target=globalaccelerator v20180706.updatelistener.
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.UpdateListener API from Amazon Global Accelerator
+    — 1 operation(s) for #x amz target=globalaccelerator v20180706.updatelistener.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.UpdateListener'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatelistener-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatelistener-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1568,21 +1396,17 @@ apis:
     url: json-schema/global-accelerator-accelerator-schema.json
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
-- aid: >-
-    amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr-api
-  name: >-
-    Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.WithdrawByoipCidr API
-  description: >-
-    The #X Amz Target=GlobalAccelerator V20180706.WithdrawByoipCidr API from Amazon Global Accelerator
-    — 1 operation(s) for #x amz target=globalaccelerator v20180706.withdrawbyoipcidr.
+- aid: amazon-global-accelerator:amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr-api
+  name: 'Amazon Global Accelerator #X Amz Target=GlobalAccelerator V20180706.WithdrawByoipCidr API'
+  description: 'The #X Amz Target=GlobalAccelerator V20180706.WithdrawByoipCidr API from Amazon Global
+    Accelerator — 1 operation(s) for #x amz target=globalaccelerator v20180706.withdrawbyoipcidr.'
   humanURL: https://aws.amazon.com/global-accelerator/
   baseURL: https://globalaccelerator.amazonaws.com
   tags:
   - '#X Amz Target=GlobalAccelerator V20180706.WithdrawByoipCidr'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr-api-openapi.yml
+    url: openapi/amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
   - type: Pricing
@@ -1600,84 +1424,87 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
 common:
-  - type: CapabilityMap
-    url: capabilities/amazon-global-accelerator-capability-edges.yml
-    name: Amazon Global Accelerator Business Capability Map
-  - type: PostmanWorkspace
-    url: https://www.postman.com/kinlaneapi/amazon-global-accelerator/overview
-  - type: AgenticAccess
-    url: agentic-access/amazon-global-accelerator-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/amazon-global-accelerator-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/amazon-global-accelerator-domain-security.yml
-  - type: Authentication
-    url: authentication/amazon-global-accelerator-authentication.yml
-  - type: Portal
-    url: https://console.aws.amazon.com/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/global-accelerator/
-  - type: TermsOfService
-    url: https://aws.amazon.com/service-terms/
-  - type: PrivacyPolicy
-    url: https://aws.amazon.com/privacy/
-  - type: Support
-    url: https://aws.amazon.com/premiumsupport/
-  - type: Blog
-    url: https://aws.amazon.com/blogs/networking-and-content-delivery/
-  - type: GitHubOrganization
-    url: https://github.com/aws
-  - type: Console
-    url: https://console.aws.amazon.com/globalaccelerator
-  - type: Signup
-    url: https://portal.aws.amazon.com/billing/signup
-  - type: StatusPage
-    url: https://health.aws.amazon.com/health/status
-  - type: Contact
-    url: https://aws.amazon.com/contact-us/
-  - type: SpectralRules
-    url: rules/amazon-global-accelerator-spectral-rules.yml
-  - type: Vocabulary
-    url: vocabulary/amazon-global-accelerator-vocabulary.yaml
-  - type: Features
-    data:
-      - name: Static Anycast IP Addresses
-        description: >-
-          Provides two static IP addresses as fixed entry points to applications, simplifying DNS management and
-          whitelisting.
-      - name: AWS Global Network Routing
-        description: >-
-          Routes user traffic through the AWS global network backbone for up to 60% performance improvement over public
-          internet.
-      - name: Intelligent Traffic Distribution
-        description: Automatically routes traffic to the closest healthy endpoint based on geography, health, and routing policies.
-      - name: Health Checking
-        description: Continuously monitors endpoint health and instantly reroutes traffic away from unhealthy endpoints.
-      - name: Client IP Preservation
-        description: Preserves the original client IP address for application endpoints that need it.
-      - name: Custom Routing
-        description: Enables deterministic routing of connections to specific EC2 instances using port mappings.
-  - type: UseCases
-    data:
-      - name: Global Application Performance
-        description: Improve latency and throughput for globally distributed users by routing through AWS edge locations.
-      - name: Multi-Region Failover
-        description: Automatically failover traffic to healthy endpoints across regions without DNS changes.
-      - name: Gaming Applications
-        description: Reduce latency for real-time gaming applications using the AWS global network.
-  - type: Integrations
-    data:
-      - name: AWS Elastic Load Balancing
-        description: Route traffic to Application, Network, or Classic Load Balancers as endpoints.
-      - name: Amazon EC2
-        description: Use EC2 instances directly as Global Accelerator endpoints.
-      - name: Amazon CloudWatch
-        description: Monitor accelerator metrics and set alarms for traffic and health status.
-      - name: AWS CloudFormation
-        description: Provision Global Accelerator resources using infrastructure templates.
+- type: Website
+  url: https://amazon.com
+- type: CapabilityMap
+  url: capabilities/amazon-global-accelerator-capability-edges.yml
+  name: Amazon Global Accelerator Business Capability Map
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-global-accelerator/overview
+- type: AgenticAccess
+  url: agentic-access/amazon-global-accelerator-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-global-accelerator-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-global-accelerator-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-global-accelerator-authentication.yml
+- type: Portal
+  url: https://console.aws.amazon.com/
+- type: Documentation
+  url: https://docs.aws.amazon.com/global-accelerator/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Blog
+  url: https://aws.amazon.com/blogs/networking-and-content-delivery/
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: Console
+  url: https://console.aws.amazon.com/globalaccelerator
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
+- type: StatusPage
+  url: https://health.aws.amazon.com/health/status
+- type: Contact
+  url: https://aws.amazon.com/contact-us/
+- type: SpectralRules
+  url: rules/amazon-global-accelerator-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-global-accelerator-vocabulary.yaml
+- type: Features
+  data:
+  - name: Static Anycast IP Addresses
+    description: Provides two static IP addresses as fixed entry points to applications, simplifying DNS
+      management and whitelisting.
+  - name: AWS Global Network Routing
+    description: Routes user traffic through the AWS global network backbone for up to 60% performance
+      improvement over public internet.
+  - name: Intelligent Traffic Distribution
+    description: Automatically routes traffic to the closest healthy endpoint based on geography, health,
+      and routing policies.
+  - name: Health Checking
+    description: Continuously monitors endpoint health and instantly reroutes traffic away from unhealthy
+      endpoints.
+  - name: Client IP Preservation
+    description: Preserves the original client IP address for application endpoints that need it.
+  - name: Custom Routing
+    description: Enables deterministic routing of connections to specific EC2 instances using port mappings.
+- type: UseCases
+  data:
+  - name: Global Application Performance
+    description: Improve latency and throughput for globally distributed users by routing through AWS
+      edge locations.
+  - name: Multi-Region Failover
+    description: Automatically failover traffic to healthy endpoints across regions without DNS changes.
+  - name: Gaming Applications
+    description: Reduce latency for real-time gaming applications using the AWS global network.
+- type: Integrations
+  data:
+  - name: AWS Elastic Load Balancing
+    description: Route traffic to Application, Network, or Classic Load Balancers as endpoints.
+  - name: Amazon EC2
+    description: Use EC2 instances directly as Global Accelerator endpoints.
+  - name: Amazon CloudWatch
+    description: Monitor accelerator metrics and set alarms for traffic and health status.
+  - name: AWS CloudFormation
+    description: Provision Global Accelerator resources using infrastructure templates.
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
 x-parent: aws
 x-relationship: product
