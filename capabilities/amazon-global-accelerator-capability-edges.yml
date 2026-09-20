@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 34
+edge_count: 46
 edges:
 - tag: '#X Amz Target=GlobalAccelerator V20180706.UpdateAccelerator'
   spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateaccelerator-api-openapi.yml
@@ -23,6 +23,57 @@ edges:
     IpAddressType, IpSet, AcceleratorStatus'
   reason: Updates a cloud networking construct (static IP accelerator) — management of cloud/network infrastructure
     resources (BC-600.50).
+- tag: '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: '"CreateCustomRoutingEndpointGroup  Amazon Global Accelerator Create Custom Routing Endpoint
+    Group"; CustomRoutingDestinationConfiguration, CustomRoutingProtocols'
+  reason: Configures network endpoint groups and destination port/protocol routing for the accelerator
+    — cloud network infrastructure configuration.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: '"CreateCustomRoutingListener"; schemas PortRange, PortNumber, CustomRoutingListener'
+  reason: Creates a network listener with port ranges on the accelerator — pure network infrastructure
+    provisioning.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createendpointgroup-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: '"CreateEndpointGroup"; schemas HealthCheckIntervalSeconds, TrafficDialPercentage, EndpointConfiguration'
+  reason: Defines traffic dial, health checks and endpoint configuration for network routing — cloud/network
+    infrastructure management.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.CreateListener'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createlistener-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: '"CreateListener  Amazon Global Accelerator Create Listener"; schemas Protocol, PortRange,
+    ClientAffinity'
+  reason: Creates a protocol/port listener for accelerated network traffic — network infrastructure configuration,
+    not a business capability.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.DeleteAccelerator'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteaccelerator-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: '"DeleteAccelerator  Amazon Global Accelerator Delete Accelerator"; AcceleratorNotDisabledException'
+  reason: Decommissions a network accelerator resource — lifecycle management of cloud network infrastructure.
+  recovered_from: sweep-20260829T005356Z-edges.json
 - tag: '#X Amz Target=GlobalAccelerator V20180706.UpdateCustomRoutingAccelerator'
   spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator-api-openapi.yml
   capability_id: BC-600.50
@@ -42,6 +93,48 @@ edges:
     PortOverride'
   reason: Configures endpoint groups, health checks and traffic dials in a cloud networking service —
     management of cloud/network infrastructure (BC-600.50).
+- tag: '#X Amz Target=GlobalAccelerator V20180706.UpdateListener'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatelistener-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: '"UpdateListener"; schemas Protocol, PortRange, ClientAffinity, Listener'
+  reason: Network listener/protocol/port configuration on the accelerator — cloud network infrastructure
+    management.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: AddCustomRoutingEndpoints 'Add Custom Routing Endpoints'; schemas 'CustomRoutingEndpointConfiguration',
+    'EndpointGroupNotFoundException'
+  reason: Registers network endpoints into an accelerator endpoint group — network infrastructure configuration
+    for a global traffic-routing service. Maps to cloud/network infrastructure management; the tag string
+    is a generated X-Amz-Target artefact, so the operation summary and schemas carry the meaning.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.AddEndpoints'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addendpoints-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: AddEndpoints 'Add Endpoints'; schemas 'EndpointConfiguration', 'EndpointWeight', 'HealthState'
+  reason: Adds weighted network endpoints with health state to an accelerator endpoint group — configuration
+    of network/cloud infrastructure traffic routing.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.AdvertiseByoipCidr'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: AdvertiseByoipCidr 'Advertise Byoip Cidr'; schemas 'ByoipCidr', 'ByoipCidrState', 'IncorrectCidrStateException'
+  reason: Advertises a bring-your-own-IP CIDR range over the AWS network — IP address space / network
+    infrastructure management.
+  recovered_from: sweep-20260829T005356Z-edges.json
 - tag: '#X Amz Target=GlobalAccelerator V20180706.DeleteCustomRoutingAccelerator'
   spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator-api-openapi.yml
   capability_id: BC-600.50
@@ -146,6 +239,37 @@ edges:
   evidence: 'UpdateCustomRoutingListener ... schemas: PortRange, CustomRoutingListener, PortNumber'
   reason: Configures listener port ranges on a cloud load-balancing/routing resource — cloud network infrastructure
     configuration (BC-600.50).
+- tag: '#X Amz Target=GlobalAccelerator V20180706.WithdrawByoipCidr'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: '"WithdrawByoipCidr"; schemas ByoipCidr, ByoipCidrState, IncorrectCidrStateException'
+  reason: Withdraws advertisement of a bring-your-own IP address range — IP address/network infrastructure
+    administration.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.ListByoipCidrs'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listbyoipcidrs-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.72
+  evidence: ListByoipCidrs — schemas ByoipCidrs, ByoipCidrState
+  reason: Listing bring-your-own IP address ranges used by the accelerator; IP address space is network
+    infrastructure.
+  recovered_from: sweep-20260829T005356Z-edges.json
+- tag: '#X Amz Target=GlobalAccelerator V20180706.AllowCustomRoutingTraffic'
+  spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: AllowCustomRoutingTraffic; schemas 'DestinationAddresses', 'DestinationPorts', 'PortNumber',
+    'IpAddress'
+  reason: Configures which destination IP addresses and ports may receive traffic through the accelerator
+    — network traffic/infrastructure configuration, not a security-programme capability.
+  recovered_from: sweep-20260829T005356Z-edges.json
 - tag: '#X Amz Target=GlobalAccelerator V20180706.CreateAccelerator'
   spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createaccelerator-api-openapi.yml
   capability_id: BC-600.50
