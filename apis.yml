@@ -1424,6 +1424,8 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
 common:
+- type: Plans
+  url: plans/amazon-global-accelerator-plans-pricing.yml
 - type: Website
   url: https://amazon.com
 - type: CapabilityMap
