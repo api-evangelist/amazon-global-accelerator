@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2018-08-08'
   x-release: v4
-  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.CreateAccelerator #X Amz Target=GlobalAccelerator V20180706.CreateAccelerator #X Amz Target=GlobalAccelerator V20180706.CreateAccelerator API'
-  description: '<fullname>Global Accelerator</fullname> <p>This is the <i>Global Accelerator API Reference</i>. This guide is for developers who need detailed information about Global Accelerator API actions, data types, and errors. For more information about Global Accelerator features, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p> <p>Global Accelerator is a service in which you create <i>accelerators</i> to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose, you can gain additional benefits. </p> <ul> <li> <p>By using a standard accelerator, you can improve availability of your internet applications that are used by a global audience. With a standard accelerator, Global Accelerator directs traffic to optimal endpoints over the Amazon Web Services global network. </p> </li> <li> <p>For other scenarios, you might choose a custom routing accelerator. With a custom routing accelerator, you can use application logic to directly map one or more users to a specific endpoint among many endpoints.</p> </li> </ul> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important> <p>By default, Global Accelerator provides you with static IP addresses that you associate with your accelerator. The static IP addresses are anycast from the Amazon Web Services edge network. For IPv4, Global Accelerator provides two static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4 addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address ranges that you bring toGlobal Accelerator (BYOIP). </p> <p>For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in multiple Amazon Web Services Regions , which increases the availability of your applications. Endpoints for standard accelerators can be Network Load Balancers, Application Load Balancers, Amazon EC2 instances, or Elastic IP addresses that are located in one Amazon Web Services Region or multiple Amazon Web Services Regions. For custom routing accelerators, you map traffic that arrives to the static IP addresses to specific Amazon EC2 servers in endpoints that are virtual private cloud (VPC) subnets.</p> <important> <p>The static IP addresses remain assigned to your accelerator for as long as it exists, even if you disable the accelerator and it no longer accepts or routes traffic. However, when you <i>delete</i> an accelerator, you lose the static IP addresses that are assigned to it, so you can no longer route traffic by using them. You can use IAM policies like tag-based permissions with Global Accelerator to limit the users who have permissions to delete an accelerator. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/access-control-manage-access-tag-policies.html">Tag-based policies</a>.</p> </important> <p>For standard accelerators, Global Accelerator uses the Amazon Web Services global network to route traffic to the optimal regional endpoint based on health, client location, and policies that you configure. The service reacts instantly to changes in health or configuration to ensure that internet traffic from clients is always directed to healthy endpoints.</p> <p>For more information about understanding and using Global Accelerator, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p>'
+  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator…'
+  description: 'Global Accelerator
+
+    This is the Global Accelerator API Reference.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/globalaccelerator-2018-08-08.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +128,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: CreateAccelerator
-      description: <p>Create an accelerator. An accelerator includes one or more listeners that process inbound connections and direct traffic to one or more endpoint groups, each of which includes endpoints, such as Network Load Balancers. </p> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important>
+      description: 'Create an accelerator. An accelerator includes one or more listeners that process inbound connections and direct traffic to one or more endpoint groups, each of which includes endpoints, such as Network Load Balancers.
+
+
+        Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify --region us-west-2 on AWS CLI commands.'
       responses:
         '200':
           description: Success
@@ -201,8 +207,8 @@ paths:
       - '#X Amz Target=GlobalAccelerator V20180706.CreateAccelerator'
 components:
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -213,8 +219,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -237,42 +249,7 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    AcceleratorEvent:
-      type: object
-      properties:
-        Message:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: A string that contains an <code>Event</code> message describing changes or errors when you update an accelerator in Global Accelerator from IPv4 to dual-stack, or dual-stack to IPv4.
-        Timestamp:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: A timestamp for when you update an accelerator in Global Accelerator from IPv4 to dual-stack, or dual-stack to IPv4.
-      description: 'A complex type that contains a <code>Timestamp</code> value and <code>Message</code> for changes that you make to an accelerator in Global Accelerator. Messages stored here provide progress or error information when you update an accelerator from IPv4 to dual-stack, or from dual-stack to IPv4. Global Accelerator stores a maximum of ten event messages. '
-    IpAddressType:
-      type: string
-      enum:
-      - IPV4
-      - DUAL_STACK
-    AcceleratorEvents:
-      type: array
-      items:
-        $ref: '#/components/schemas/AcceleratorEvent'
-    IdempotencyToken:
-      type: string
-      maxLength: 255
-    GenericBoolean:
-      type: boolean
-    Timestamp:
-      type: string
-      format: date-time
     IpSet:
       type: object
       properties:
@@ -290,11 +267,57 @@ components:
           - $ref: '#/components/schemas/IpAddressFamily'
           - description: 'The types of IP addresses included in this IP set. '
       description: A complex type for the set of IP addresses for an accelerator.
-    AcceleratorStatus:
+    InternalServiceErrorException: {}
+    IpAddressFamily:
       type: string
       enum:
-      - DEPLOYED
-      - IN_PROGRESS
+      - IPv4
+      - IPv6
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    AcceleratorEvents:
+      type: array
+      items:
+        $ref: '#/components/schemas/AcceleratorEvent'
+    IpAddressType:
+      type: string
+      enum:
+      - IPV4
+      - DUAL_STACK
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: A string that contains a <code>Tag</code> key.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: A string that contains a <code>Tag</code> value.
+      description: A complex type that contains a <code>Tag</code> key and <code>Tag</code> value.
+    IpSets:
+      type: array
+      items:
+        $ref: '#/components/schemas/IpSet'
+    IpAddress:
+      type: string
+      maxLength: 45
+    InvalidArgumentException: {}
+    LimitExceededException: {}
+    IpAddresses:
+      type: array
+      items:
+        $ref: '#/components/schemas/IpAddress'
+      minItems: 0
+      maxItems: 2
+    GenericBoolean:
+      type: boolean
     Accelerator:
       type: object
       properties:
@@ -343,21 +366,32 @@ components:
           - $ref: '#/components/schemas/AcceleratorEvents'
           - description: A history of changes that you make to an accelerator in Global Accelerator.
       description: An accelerator is a complex type that includes one or more listeners that process inbound connections and then direct traffic to one or more endpoint groups, each of which includes endpoints, such as load balancers.
-    Tags:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-    IpAddresses:
-      type: array
-      items:
-        $ref: '#/components/schemas/IpAddress'
-      minItems: 0
-      maxItems: 2
     TagValue:
       type: string
       minLength: 0
       maxLength: 256
-    InternalServiceErrorException: {}
+    Timestamp:
+      type: string
+      format: date-time
+    CreateAcceleratorResponse:
+      type: object
+      properties:
+        Accelerator:
+          allOf:
+          - $ref: '#/components/schemas/Accelerator'
+          - description: The accelerator that is created by specifying a listener and the supported IP address types.
+    AcceleratorEvent:
+      type: object
+      properties:
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: A string that contains an <code>Event</code> message describing changes or errors when you update an accelerator in Global Accelerator from IPv4 to dual-stack, or dual-stack to IPv4.
+        Timestamp:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: A timestamp for when you update an accelerator in Global Accelerator from IPv4 to dual-stack, or dual-stack to IPv4.
+      description: 'A complex type that contains a <code>Timestamp</code> value and <code>Message</code> for changes that you make to an accelerator in Global Accelerator. Messages stored here provide progress or error information when you update an accelerator from IPv4 to dual-stack, or from dual-stack to IPv4. Global Accelerator stores a maximum of ten event messages. '
     CreateAcceleratorRequest:
       type: object
       required:
@@ -389,49 +423,21 @@ components:
           allOf:
           - $ref: '#/components/schemas/Tags'
           - description: <p>Create tags for an accelerator.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html">Tagging in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.</p>
-    IpAddress:
+    AcceleratorStatus:
       type: string
-      maxLength: 45
-    InvalidArgumentException: {}
-    LimitExceededException: {}
-    IpSets:
+      enum:
+      - DEPLOYED
+      - IN_PROGRESS
+    Tags:
       type: array
       items:
-        $ref: '#/components/schemas/IpSet'
+        $ref: '#/components/schemas/Tag'
     GenericString:
       type: string
       maxLength: 255
-    CreateAcceleratorResponse:
-      type: object
-      properties:
-        Accelerator:
-          allOf:
-          - $ref: '#/components/schemas/Accelerator'
-          - description: The accelerator that is created by specifying a listener and the supported IP address types.
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: A string that contains a <code>Tag</code> key.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: A string that contains a <code>Tag</code> value.
-      description: A complex type that contains a <code>Tag</code> key and <code>Tag</code> value.
-    IpAddressFamily:
+    IdempotencyToken:
       type: string
-      enum:
-      - IPv4
-      - IPv6
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
+      maxLength: 255
   securitySchemes:
     hmac:
       type: apiKey

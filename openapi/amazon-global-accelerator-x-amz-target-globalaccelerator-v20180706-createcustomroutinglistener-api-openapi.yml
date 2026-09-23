@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2018-08-08'
   x-release: v4
-  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener #X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener API'
-  description: '<fullname>Global Accelerator</fullname> <p>This is the <i>Global Accelerator API Reference</i>. This guide is for developers who need detailed information about Global Accelerator API actions, data types, and errors. For more information about Global Accelerator features, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p> <p>Global Accelerator is a service in which you create <i>accelerators</i> to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose, you can gain additional benefits. </p> <ul> <li> <p>By using a standard accelerator, you can improve availability of your internet applications that are used by a global audience. With a standard accelerator, Global Accelerator directs traffic to optimal endpoints over the Amazon Web Services global network. </p> </li> <li> <p>For other scenarios, you might choose a custom routing accelerator. With a custom routing accelerator, you can use application logic to directly map one or more users to a specific endpoint among many endpoints.</p> </li> </ul> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important> <p>By default, Global Accelerator provides you with static IP addresses that you associate with your accelerator. The static IP addresses are anycast from the Amazon Web Services edge network. For IPv4, Global Accelerator provides two static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4 addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address ranges that you bring toGlobal Accelerator (BYOIP). </p> <p>For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in multiple Amazon Web Services Regions , which increases the availability of your applications. Endpoints for standard accelerators can be Network Load Balancers, Application Load Balancers, Amazon EC2 instances, or Elastic IP addresses that are located in one Amazon Web Services Region or multiple Amazon Web Services Regions. For custom routing accelerators, you map traffic that arrives to the static IP addresses to specific Amazon EC2 servers in endpoints that are virtual private cloud (VPC) subnets.</p> <important> <p>The static IP addresses remain assigned to your accelerator for as long as it exists, even if you disable the accelerator and it no longer accepts or routes traffic. However, when you <i>delete</i> an accelerator, you lose the static IP addresses that are assigned to it, so you can no longer route traffic by using them. You can use IAM policies like tag-based permissions with Global Accelerator to limit the users who have permissions to delete an accelerator. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/access-control-manage-access-tag-policies.html">Tag-based policies</a>.</p> </important> <p>For standard accelerators, Global Accelerator uses the Amazon Web Services global network to route traffic to the optimal regional endpoint based on health, client location, and policies that you configure. The service reacts instantly to changes in health or configuration to ensure that internet traffic from clients is always directed to healthy endpoints.</p> <p>For more information about understanding and using Global Accelerator, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p>'
+  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator…'
+  description: 'Global Accelerator
+
+    This is the Global Accelerator API Reference.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/globalaccelerator-2018-08-08.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +128,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: CreateCustomRoutingListener
-      description: 'Create a listener to process inbound connections from clients to a custom routing accelerator. Connections arrive to assigned static IP addresses on the port range that you specify. '
+      description: Create a listener to process inbound connections from clients to a custom routing accelerator. Connections arrive to assigned static IP addresses on the port range that you specify.
       responses:
         '200':
           description: Success
@@ -226,82 +229,9 @@ paths:
       tags:
       - '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingListener'
 components:
-  schemas:
-    CreateCustomRoutingListenerResponse:
-      type: object
-      properties:
-        Listener:
-          allOf:
-          - $ref: '#/components/schemas/CustomRoutingListener'
-          - description: The listener that you've created for a custom routing accelerator.
-    InvalidPortRangeException: {}
-    IdempotencyToken:
-      type: string
-      maxLength: 255
-    PortRange:
-      type: object
-      properties:
-        FromPort:
-          allOf:
-          - $ref: '#/components/schemas/PortNumber'
-          - description: The first port in the range of ports, inclusive.
-        ToPort:
-          allOf:
-          - $ref: '#/components/schemas/PortNumber'
-          - description: The last port in the range of ports, inclusive.
-      description: A complex type for a range of ports for a listener.
-    CustomRoutingListener:
-      type: object
-      properties:
-        ListenerArn:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The Amazon Resource Name (ARN) of the listener.
-        PortRanges:
-          allOf:
-          - $ref: '#/components/schemas/PortRanges'
-          - description: <p>The port range to support for connections from clients to your accelerator.</p> <p>Separately, you set port ranges for endpoints. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-endpoints.html">About endpoints for custom routing accelerators</a>.</p>
-      description: A complex type for a listener for a custom routing accelerator.
-    InternalServiceErrorException: {}
-    InvalidArgumentException: {}
-    LimitExceededException: {}
-    AcceleratorNotFoundException: {}
-    GenericString:
-      type: string
-      maxLength: 255
-    PortNumber:
-      type: integer
-      minimum: 1
-      maximum: 65535
-    PortRanges:
-      type: array
-      items:
-        $ref: '#/components/schemas/PortRange'
-      minItems: 1
-      maxItems: 10
-    CreateCustomRoutingListenerRequest:
-      type: object
-      required:
-      - AcceleratorArn
-      - PortRanges
-      - IdempotencyToken
-      title: CreateCustomRoutingListenerRequest
-      properties:
-        AcceleratorArn:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The Amazon Resource Name (ARN) of the accelerator for a custom routing listener.
-        PortRanges:
-          allOf:
-          - $ref: '#/components/schemas/PortRanges'
-          - description: <p>The port range to support for connections from clients to your accelerator.</p> <p>Separately, you set port ranges for endpoints. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-endpoints.html">About endpoints for custom routing accelerators</a>.</p>
-        IdempotencyToken:
-          allOf:
-          - $ref: '#/components/schemas/IdempotencyToken'
-          - description: A unique, case-sensitive identifier that you provide to ensure the idempotency—that is, the uniqueness—of the request.
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -312,8 +242,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -336,12 +272,79 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
+  schemas:
+    CreateCustomRoutingListenerResponse:
+      type: object
+      properties:
+        Listener:
+          allOf:
+          - $ref: '#/components/schemas/CustomRoutingListener'
+          - description: The listener that you've created for a custom routing accelerator.
+    InternalServiceErrorException: {}
+    InvalidArgumentException: {}
+    LimitExceededException: {}
+    PortRanges:
+      type: array
+      items:
+        $ref: '#/components/schemas/PortRange'
+      minItems: 1
+      maxItems: 10
+    InvalidPortRangeException: {}
+    PortRange:
+      type: object
+      properties:
+        FromPort:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The first port in the range of ports, inclusive.
+        ToPort:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The last port in the range of ports, inclusive.
+      description: A complex type for a range of ports for a listener.
+    CreateCustomRoutingListenerRequest:
+      type: object
+      required:
+      - AcceleratorArn
+      - PortRanges
+      - IdempotencyToken
+      title: CreateCustomRoutingListenerRequest
+      properties:
+        AcceleratorArn:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The Amazon Resource Name (ARN) of the accelerator for a custom routing listener.
+        PortRanges:
+          allOf:
+          - $ref: '#/components/schemas/PortRanges'
+          - description: <p>The port range to support for connections from clients to your accelerator.</p> <p>Separately, you set port ranges for endpoints. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-endpoints.html">About endpoints for custom routing accelerators</a>.</p>
+        IdempotencyToken:
+          allOf:
+          - $ref: '#/components/schemas/IdempotencyToken'
+          - description: A unique, case-sensitive identifier that you provide to ensure the idempotency—that is, the uniqueness—of the request.
+    PortNumber:
+      type: integer
+      minimum: 1
+      maximum: 65535
+    CustomRoutingListener:
+      type: object
+      properties:
+        ListenerArn:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The Amazon Resource Name (ARN) of the listener.
+        PortRanges:
+          allOf:
+          - $ref: '#/components/schemas/PortRanges'
+          - description: <p>The port range to support for connections from clients to your accelerator.</p> <p>Separately, you set port ranges for endpoints. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-custom-routing-endpoints.html">About endpoints for custom routing accelerators</a>.</p>
+      description: A complex type for a listener for a custom routing accelerator.
+    AcceleratorNotFoundException: {}
+    GenericString:
+      type: string
+      maxLength: 255
+    IdempotencyToken:
+      type: string
+      maxLength: 255
   securitySchemes:
     hmac:
       type: apiKey

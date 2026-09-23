@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2018-08-08'
   x-release: v4
-  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr #X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr #X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr API'
-  description: '<fullname>Global Accelerator</fullname> <p>This is the <i>Global Accelerator API Reference</i>. This guide is for developers who need detailed information about Global Accelerator API actions, data types, and errors. For more information about Global Accelerator features, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p> <p>Global Accelerator is a service in which you create <i>accelerators</i> to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose, you can gain additional benefits. </p> <ul> <li> <p>By using a standard accelerator, you can improve availability of your internet applications that are used by a global audience. With a standard accelerator, Global Accelerator directs traffic to optimal endpoints over the Amazon Web Services global network. </p> </li> <li> <p>For other scenarios, you might choose a custom routing accelerator. With a custom routing accelerator, you can use application logic to directly map one or more users to a specific endpoint among many endpoints.</p> </li> </ul> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important> <p>By default, Global Accelerator provides you with static IP addresses that you associate with your accelerator. The static IP addresses are anycast from the Amazon Web Services edge network. For IPv4, Global Accelerator provides two static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4 addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address ranges that you bring toGlobal Accelerator (BYOIP). </p> <p>For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in multiple Amazon Web Services Regions , which increases the availability of your applications. Endpoints for standard accelerators can be Network Load Balancers, Application Load Balancers, Amazon EC2 instances, or Elastic IP addresses that are located in one Amazon Web Services Region or multiple Amazon Web Services Regions. For custom routing accelerators, you map traffic that arrives to the static IP addresses to specific Amazon EC2 servers in endpoints that are virtual private cloud (VPC) subnets.</p> <important> <p>The static IP addresses remain assigned to your accelerator for as long as it exists, even if you disable the accelerator and it no longer accepts or routes traffic. However, when you <i>delete</i> an accelerator, you lose the static IP addresses that are assigned to it, so you can no longer route traffic by using them. You can use IAM policies like tag-based permissions with Global Accelerator to limit the users who have permissions to delete an accelerator. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/access-control-manage-access-tag-policies.html">Tag-based policies</a>.</p> </important> <p>For standard accelerators, Global Accelerator uses the Amazon Web Services global network to route traffic to the optimal regional endpoint based on health, client location, and policies that you configure. The service reacts instantly to changes in health or configuration to ensure that internet traffic from clients is always directed to healthy endpoints.</p> <p>For more information about understanding and using Global Accelerator, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p>'
+  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator…'
+  description: 'Global Accelerator
+
+    This is the Global Accelerator API Reference.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/globalaccelerator-2018-08-08.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +128,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ProvisionByoipCidr
-      description: <p>Provisions an IP address range to use with your Amazon Web Services resources through bring your own IP addresses (BYOIP) and creates a corresponding address pool. After the address range is provisioned, it is ready to be advertised using <a href="https://docs.aws.amazon.com/global-accelerator/latest/api/AdvertiseByoipCidr.html"> AdvertiseByoipCidr</a>.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses (BYOIP)</a> in the <i>Global Accelerator Developer Guide</i>.</p>
+      description: 'Provisions an IP address range to use with your Amazon Web Services resources through bring your own IP addresses (BYOIP) and creates a corresponding address pool. After the address range is provisioned, it is ready to be advertised using AdvertiseByoipCidr.
+
+
+        For more information, see Bring your own IP addresses (BYOIP) in the Global Accelerator Developer Guide.'
       responses:
         '200':
           description: Success
@@ -226,104 +232,9 @@ paths:
       tags:
       - '#X Amz Target=GlobalAccelerator V20180706.ProvisionByoipCidr'
 components:
-  schemas:
-    ByoipCidrEvent:
-      type: object
-      properties:
-        Message:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: A string that contains an <code>Event</code> message describing changes that you make in the status of an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
-        Timestamp:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: A timestamp for when you make a status change for an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
-      description: A complex type that contains a <code>Message</code> and a <code>Timestamp</code> value for changes that you make in the status of an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
-    ByoipCidr:
-      type: object
-      properties:
-        Cidr:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The address range, in CIDR notation.
-        State:
-          allOf:
-          - $ref: '#/components/schemas/ByoipCidrState'
-          - description: The state of the address pool.
-        Events:
-          allOf:
-          - $ref: '#/components/schemas/ByoipCidrEvents'
-          - description: A history of status changes for an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
-      description: <p>Information about an IP address range that is provisioned for use with your Amazon Web Services resources through bring your own IP address (BYOIP).</p> <p>The following describes each BYOIP <code>State</code> that your IP address range can be in.</p> <ul> <li> <p> <b>PENDING_PROVISIONING</b> — You’ve submitted a request to provision an IP address range but it is not yet provisioned with Global Accelerator.</p> </li> <li> <p> <b>READY</b> — The address range is provisioned with Global Accelerator and can be advertised.</p> </li> <li> <p> <b>PENDING_ADVERTISING</b> — You’ve submitted a request for Global Accelerator to advertise an address range but it is not yet being advertised.</p> </li> <li> <p> <b>ADVERTISING</b> — The address range is being advertised by Global Accelerator.</p> </li> <li> <p> <b>PENDING_WITHDRAWING</b> — You’ve submitted a request to withdraw an address range from being advertised but it is still being advertised by Global Accelerator.</p> </li> <li> <p> <b>PENDING_DEPROVISIONING</b> — You’ve submitted a request to deprovision an address range from Global Accelerator but it is still provisioned.</p> </li> <li> <p> <b>DEPROVISIONED</b> — The address range is deprovisioned from Global Accelerator.</p> </li> <li> <p> <b>FAILED_PROVISION </b> — The request to provision the address range from Global Accelerator was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> <li> <p> <b>FAILED_ADVERTISING</b> — The request for Global Accelerator to advertise the address range was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> <li> <p> <b>FAILED_WITHDRAW</b> — The request to withdraw the address range from advertising by Global Accelerator was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> <li> <p> <b>FAILED_DEPROVISION </b> — The request to deprovision the address range from Global Accelerator was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> </ul>
-    AccessDeniedException: {}
-    Timestamp:
-      type: string
-      format: date-time
-    InternalServiceErrorException: {}
-    ByoipCidrState:
-      type: string
-      enum:
-      - PENDING_PROVISIONING
-      - READY
-      - PENDING_ADVERTISING
-      - ADVERTISING
-      - PENDING_WITHDRAWING
-      - PENDING_DEPROVISIONING
-      - DEPROVISIONED
-      - FAILED_PROVISION
-      - FAILED_ADVERTISING
-      - FAILED_WITHDRAW
-      - FAILED_DEPROVISION
-    InvalidArgumentException: {}
-    ProvisionByoipCidrResponse:
-      type: object
-      properties:
-        ByoipCidr:
-          allOf:
-          - $ref: '#/components/schemas/ByoipCidr'
-          - description: Information about the address range.
-    CidrAuthorizationContext:
-      type: object
-      required:
-      - Message
-      - Signature
-      properties:
-        Message:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The plain-text authorization message for the prefix and account.
-        Signature:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The signed authorization message for the prefix and account.
-      description: <p>Provides authorization for Amazon to bring a specific IP address range to a specific Amazon Web Services account using bring your own IP addresses (BYOIP). </p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses (BYOIP)</a> in the <i>Global Accelerator Developer Guide</i>.</p>
-    LimitExceededException: {}
-    GenericString:
-      type: string
-      maxLength: 255
-    IncorrectCidrStateException: {}
-    ProvisionByoipCidrRequest:
-      type: object
-      required:
-      - Cidr
-      - CidrAuthorizationContext
-      title: ProvisionByoipCidrRequest
-      properties:
-        Cidr:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The public IPv4 address range, in CIDR notation. The most specific IP prefix that you can specify is /24. The address range cannot overlap with another address range that you've brought to this or another Region.
-        CidrAuthorizationContext:
-          allOf:
-          - $ref: '#/components/schemas/CidrAuthorizationContext'
-          - description: 'A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. '
-    ByoipCidrEvents:
-      type: array
-      items:
-        $ref: '#/components/schemas/ByoipCidrEvent'
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -334,8 +245,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -358,12 +275,101 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
+  schemas:
+    InternalServiceErrorException: {}
+    ByoipCidr:
+      type: object
+      properties:
+        Cidr:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The address range, in CIDR notation.
+        State:
+          allOf:
+          - $ref: '#/components/schemas/ByoipCidrState'
+          - description: The state of the address pool.
+        Events:
+          allOf:
+          - $ref: '#/components/schemas/ByoipCidrEvents'
+          - description: A history of status changes for an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
+      description: <p>Information about an IP address range that is provisioned for use with your Amazon Web Services resources through bring your own IP address (BYOIP).</p> <p>The following describes each BYOIP <code>State</code> that your IP address range can be in.</p> <ul> <li> <p> <b>PENDING_PROVISIONING</b> — You’ve submitted a request to provision an IP address range but it is not yet provisioned with Global Accelerator.</p> </li> <li> <p> <b>READY</b> — The address range is provisioned with Global Accelerator and can be advertised.</p> </li> <li> <p> <b>PENDING_ADVERTISING</b> — You’ve submitted a request for Global Accelerator to advertise an address range but it is not yet being advertised.</p> </li> <li> <p> <b>ADVERTISING</b> — The address range is being advertised by Global Accelerator.</p> </li> <li> <p> <b>PENDING_WITHDRAWING</b> — You’ve submitted a request to withdraw an address range from being advertised but it is still being advertised by Global Accelerator.</p> </li> <li> <p> <b>PENDING_DEPROVISIONING</b> — You’ve submitted a request to deprovision an address range from Global Accelerator but it is still provisioned.</p> </li> <li> <p> <b>DEPROVISIONED</b> — The address range is deprovisioned from Global Accelerator.</p> </li> <li> <p> <b>FAILED_PROVISION </b> — The request to provision the address range from Global Accelerator was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> <li> <p> <b>FAILED_ADVERTISING</b> — The request for Global Accelerator to advertise the address range was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> <li> <p> <b>FAILED_WITHDRAW</b> — The request to withdraw the address range from advertising by Global Accelerator was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> <li> <p> <b>FAILED_DEPROVISION </b> — The request to deprovision the address range from Global Accelerator was not successful. Please make sure that you provide all of the correct information, and try again. If the request fails a second time, contact Amazon Web Services support.</p> </li> </ul>
+    ByoipCidrState:
+      type: string
+      enum:
+      - PENDING_PROVISIONING
+      - READY
+      - PENDING_ADVERTISING
+      - ADVERTISING
+      - PENDING_WITHDRAWING
+      - PENDING_DEPROVISIONING
+      - DEPROVISIONED
+      - FAILED_PROVISION
+      - FAILED_ADVERTISING
+      - FAILED_WITHDRAW
+      - FAILED_DEPROVISION
+    ProvisionByoipCidrRequest:
+      type: object
+      required:
+      - Cidr
+      - CidrAuthorizationContext
+      title: ProvisionByoipCidrRequest
+      properties:
+        Cidr:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The public IPv4 address range, in CIDR notation. The most specific IP prefix that you can specify is /24. The address range cannot overlap with another address range that you've brought to this or another Region.
+        CidrAuthorizationContext:
+          allOf:
+          - $ref: '#/components/schemas/CidrAuthorizationContext'
+          - description: 'A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. '
+    ByoipCidrEvents:
+      type: array
+      items:
+        $ref: '#/components/schemas/ByoipCidrEvent'
+    CidrAuthorizationContext:
+      type: object
+      required:
+      - Message
+      - Signature
+      properties:
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The plain-text authorization message for the prefix and account.
+        Signature:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The signed authorization message for the prefix and account.
+      description: <p>Provides authorization for Amazon to bring a specific IP address range to a specific Amazon Web Services account using bring your own IP addresses (BYOIP). </p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses (BYOIP)</a> in the <i>Global Accelerator Developer Guide</i>.</p>
+    InvalidArgumentException: {}
+    LimitExceededException: {}
+    Timestamp:
+      type: string
+      format: date-time
+    ByoipCidrEvent:
+      type: object
+      properties:
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: A string that contains an <code>Event</code> message describing changes that you make in the status of an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
+        Timestamp:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: A timestamp for when you make a status change for an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
+      description: A complex type that contains a <code>Message</code> and a <code>Timestamp</code> value for changes that you make in the status of an IP address range that you bring to Global Accelerator through bring your own IP address (BYOIP).
+    ProvisionByoipCidrResponse:
+      type: object
+      properties:
+        ByoipCidr:
+          allOf:
+          - $ref: '#/components/schemas/ByoipCidr'
+          - description: Information about the address range.
+    IncorrectCidrStateException: {}
+    AccessDeniedException: {}
+    GenericString:
+      type: string
+      maxLength: 255
   securitySchemes:
     hmac:
       type: apiKey

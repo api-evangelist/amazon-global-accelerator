@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2018-08-08'
   x-release: v4
-  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.AddCustomRoutingEndpoints #X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup #X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup #X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup API'
-  description: '<fullname>Global Accelerator</fullname> <p>This is the <i>Global Accelerator API Reference</i>. This guide is for developers who need detailed information about Global Accelerator API actions, data types, and errors. For more information about Global Accelerator features, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p> <p>Global Accelerator is a service in which you create <i>accelerators</i> to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose, you can gain additional benefits. </p> <ul> <li> <p>By using a standard accelerator, you can improve availability of your internet applications that are used by a global audience. With a standard accelerator, Global Accelerator directs traffic to optimal endpoints over the Amazon Web Services global network. </p> </li> <li> <p>For other scenarios, you might choose a custom routing accelerator. With a custom routing accelerator, you can use application logic to directly map one or more users to a specific endpoint among many endpoints.</p> </li> </ul> <important> <p>Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example, specify <code>--region us-west-2</code> on AWS CLI commands.</p> </important> <p>By default, Global Accelerator provides you with static IP addresses that you associate with your accelerator. The static IP addresses are anycast from the Amazon Web Services edge network. For IPv4, Global Accelerator provides two static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4 addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address ranges that you bring toGlobal Accelerator (BYOIP). </p> <p>For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in multiple Amazon Web Services Regions , which increases the availability of your applications. Endpoints for standard accelerators can be Network Load Balancers, Application Load Balancers, Amazon EC2 instances, or Elastic IP addresses that are located in one Amazon Web Services Region or multiple Amazon Web Services Regions. For custom routing accelerators, you map traffic that arrives to the static IP addresses to specific Amazon EC2 servers in endpoints that are virtual private cloud (VPC) subnets.</p> <important> <p>The static IP addresses remain assigned to your accelerator for as long as it exists, even if you disable the accelerator and it no longer accepts or routes traffic. However, when you <i>delete</i> an accelerator, you lose the static IP addresses that are assigned to it, so you can no longer route traffic by using them. You can use IAM policies like tag-based permissions with Global Accelerator to limit the users who have permissions to delete an accelerator. For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/access-control-manage-access-tag-policies.html">Tag-based policies</a>.</p> </important> <p>For standard accelerators, Global Accelerator uses the Amazon Web Services global network to route traffic to the optimal regional endpoint based on health, client location, and policies that you configure. The service reacts instantly to changes in health or configuration to ensure that internet traffic from clients is always directed to healthy endpoints.</p> <p>For more information about understanding and using Global Accelerator, see the <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html">Global Accelerator Developer Guide</a>.</p>'
+  title: 'AWS Global Accelerator #X Amz Target=GlobalAccelerator…'
+  description: 'Global Accelerator
+
+    This is the Global Accelerator API Reference.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/globalaccelerator-2018-08-08.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -252,32 +255,95 @@ paths:
       tags:
       - '#X Amz Target=GlobalAccelerator V20180706.CreateEndpointGroup'
 components:
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    EndpointWeight:
-      type: integer
-      minimum: 0
-      maximum: 255
-    HealthCheckIntervalSeconds:
-      type: integer
-      minimum: 10
-      maximum: 30
-    PortOverrides:
-      type: array
-      items:
-        $ref: '#/components/schemas/PortOverride'
-      minItems: 0
-      maxItems: 10
-    HealthCheckPort:
-      type: integer
-      minimum: 1
-      maximum: 65535
-    HealthState:
-      type: string
-      enum:
-      - INITIAL
-      - HEALTHY
-      - UNHEALTHY
-    AccessDeniedException: {}
+    EndpointGroup:
+      type: object
+      properties:
+        EndpointGroupArn:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The Amazon Resource Name (ARN) of the endpoint group.
+        EndpointGroupRegion:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The Amazon Web Services Region where the endpoint group is located.
+        EndpointDescriptions:
+          allOf:
+          - $ref: '#/components/schemas/EndpointDescriptions'
+          - description: The list of endpoint objects.
+        TrafficDialPercentage:
+          allOf:
+          - $ref: '#/components/schemas/TrafficDialPercentage'
+          - description: <p>The percentage of traffic to send to an Amazon Web Services Region. Additional traffic is distributed to other endpoint groups for this listener. </p> <p>Use this action to increase (dial up) or decrease (dial down) traffic to a specific Region. The percentage is applied to the traffic that would otherwise have been routed to the Region based on optimal routing.</p> <p>The default value is 100.</p>
+        HealthCheckPort:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckPort'
+          - description: <p>The port that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group. </p> <p>The default port is the port for the listener that this endpoint group is associated with. If the listener port is a list, Global Accelerator uses the first specified port in the list of ports.</p>
+        HealthCheckProtocol:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckProtocol'
+          - description: The protocol that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group. The default value is TCP.
+        HealthCheckPath:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckPath'
+          - description: If the protocol is HTTP/S, then this value provides the ping path that Global Accelerator uses for the destination on the endpoints for health checks. The default is slash (/).
+        HealthCheckIntervalSeconds:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckIntervalSeconds'
+          - description: The time—10 seconds or 30 seconds—between health checks for each endpoint. The default value is 30.
+        ThresholdCount:
+          allOf:
+          - $ref: '#/components/schemas/ThresholdCount'
+          - description: The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
+        PortOverrides:
+          allOf:
+          - $ref: '#/components/schemas/PortOverrides'
+          - description: 'Allows you to override the destination ports used to route traffic to an endpoint. Using a port override lets you map a list of external destination ports (that your users send traffic to) to a list of internal destination ports that you want an application endpoint to receive traffic on. '
+      description: 'A complex type for the endpoint group. An Amazon Web Services Region can have only one endpoint group for a specific listener. '
+    InternalServiceErrorException: {}
     CreateEndpointGroupRequest:
       type: object
       required:
@@ -330,27 +396,26 @@ components:
           allOf:
           - $ref: '#/components/schemas/PortOverrides'
           - description: <p>Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. For example, you can create a port override in which the listener receives user traffic on ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively, on the endpoints.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-port-override.html"> Overriding listener ports</a> in the <i>Global Accelerator Developer Guide</i>.</p>
+    HealthState:
+      type: string
+      enum:
+      - INITIAL
+      - HEALTHY
+      - UNHEALTHY
     EndpointDescriptions:
       type: array
       items:
         $ref: '#/components/schemas/EndpointDescription'
+    HealthCheckIntervalSeconds:
+      type: integer
+      minimum: 10
+      maximum: 30
     TrafficDialPercentage:
       type: number
       format: float
       minimum: 0
       maximum: 100
-    IdempotencyToken:
-      type: string
-      maxLength: 255
-    GenericBoolean:
-      type: boolean
-    CreateEndpointGroupResponse:
-      type: object
-      properties:
-        EndpointGroup:
-          allOf:
-          - $ref: '#/components/schemas/EndpointGroup'
-          - description: The information about the endpoint group that was created.
+    ListenerNotFoundException: {}
     PortOverride:
       type: object
       properties:
@@ -363,8 +428,36 @@ components:
           - $ref: '#/components/schemas/PortNumber'
           - description: The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
       description: <p>Override specific listener ports used to route traffic to endpoints that are part of an endpoint group. For example, you can create a port override in which the listener receives user traffic on ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively, on the endpoints.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-port-override.html"> Overriding listener ports</a> in the <i>Global Accelerator Developer Guide</i>.</p>
-    InternalServiceErrorException: {}
     InvalidArgumentException: {}
+    EndpointGroupAlreadyExistsException: {}
+    LimitExceededException: {}
+    EndpointWeight:
+      type: integer
+      minimum: 0
+      maximum: 255
+    GenericBoolean:
+      type: boolean
+    CreateEndpointGroupResponse:
+      type: object
+      properties:
+        EndpointGroup:
+          allOf:
+          - $ref: '#/components/schemas/EndpointGroup'
+          - description: The information about the endpoint group that was created.
+    EndpointConfigurations:
+      type: array
+      items:
+        $ref: '#/components/schemas/EndpointConfiguration'
+      minItems: 0
+      maxItems: 10
+    HealthCheckPort:
+      type: integer
+      minimum: 1
+      maximum: 65535
+    ThresholdCount:
+      type: integer
+      minimum: 1
+      maximum: 10
     EndpointConfiguration:
       type: object
       properties:
@@ -381,77 +474,17 @@ components:
           - $ref: '#/components/schemas/GenericBoolean'
           - description: <p>Indicates whether client IP address preservation is enabled for an endpoint. The value is true or false. The default value is true for new accelerators. </p> <p>If the value is set to true, the client's IP address is preserved in the <code>X-Forwarded-For</code> request header as traffic travels to applications on the endpoint fronted by the accelerator.</p> <p>Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that are Application Load Balancers and Amazon EC2 instances.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/preserve-client-ip-address.html"> Preserve client IP addresses in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.</p>
       description: A complex type for endpoints. A resource must be valid and active when you add it as an endpoint.
-    LimitExceededException: {}
-    EndpointGroup:
-      type: object
-      properties:
-        EndpointGroupArn:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The Amazon Resource Name (ARN) of the endpoint group.
-        EndpointGroupRegion:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: The Amazon Web Services Region where the endpoint group is located.
-        EndpointDescriptions:
-          allOf:
-          - $ref: '#/components/schemas/EndpointDescriptions'
-          - description: The list of endpoint objects.
-        TrafficDialPercentage:
-          allOf:
-          - $ref: '#/components/schemas/TrafficDialPercentage'
-          - description: <p>The percentage of traffic to send to an Amazon Web Services Region. Additional traffic is distributed to other endpoint groups for this listener. </p> <p>Use this action to increase (dial up) or decrease (dial down) traffic to a specific Region. The percentage is applied to the traffic that would otherwise have been routed to the Region based on optimal routing.</p> <p>The default value is 100.</p>
-        HealthCheckPort:
-          allOf:
-          - $ref: '#/components/schemas/HealthCheckPort'
-          - description: <p>The port that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group. </p> <p>The default port is the port for the listener that this endpoint group is associated with. If the listener port is a list, Global Accelerator uses the first specified port in the list of ports.</p>
-        HealthCheckProtocol:
-          allOf:
-          - $ref: '#/components/schemas/HealthCheckProtocol'
-          - description: The protocol that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group. The default value is TCP.
-        HealthCheckPath:
-          allOf:
-          - $ref: '#/components/schemas/HealthCheckPath'
-          - description: If the protocol is HTTP/S, then this value provides the ping path that Global Accelerator uses for the destination on the endpoints for health checks. The default is slash (/).
-        HealthCheckIntervalSeconds:
-          allOf:
-          - $ref: '#/components/schemas/HealthCheckIntervalSeconds'
-          - description: The time—10 seconds or 30 seconds—between health checks for each endpoint. The default value is 30.
-        ThresholdCount:
-          allOf:
-          - $ref: '#/components/schemas/ThresholdCount'
-          - description: The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-        PortOverrides:
-          allOf:
-          - $ref: '#/components/schemas/PortOverrides'
-          - description: 'Allows you to override the destination ports used to route traffic to an endpoint. Using a port override lets you map a list of external destination ports (that your users send traffic to) to a list of internal destination ports that you want an application endpoint to receive traffic on. '
-      description: 'A complex type for the endpoint group. An Amazon Web Services Region can have only one endpoint group for a specific listener. '
-    AcceleratorNotFoundException: {}
-    GenericString:
-      type: string
-      maxLength: 255
-    ListenerNotFoundException: {}
-    HealthCheckProtocol:
-      type: string
-      enum:
-      - TCP
-      - HTTP
-      - HTTPS
-    EndpointConfigurations:
-      type: array
-      items:
-        $ref: '#/components/schemas/EndpointConfiguration'
-      minItems: 0
-      maxItems: 10
     HealthCheckPath:
       type: string
       pattern: ^/[-a-zA-Z0-9@:%_\\+.~#?&/=]*$
       maxLength: 255
-    PortNumber:
-      type: integer
-      minimum: 1
-      maximum: 65535
-    EndpointGroupAlreadyExistsException: {}
+    PortOverrides:
+      type: array
+      items:
+        $ref: '#/components/schemas/PortOverride'
+      minItems: 0
+      maxItems: 10
+    AccessDeniedException: {}
     EndpointDescription:
       type: object
       properties:
@@ -476,53 +509,23 @@ components:
           - $ref: '#/components/schemas/GenericBoolean'
           - description: <p>Indicates whether client IP address preservation is enabled for an endpoint. The value is true or false. The default value is true for new accelerators. </p> <p>If the value is set to true, the client's IP address is preserved in the <code>X-Forwarded-For</code> request header as traffic travels to applications on the endpoint fronted by the accelerator.</p> <p>Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that are Application Load Balancers and Amazon EC2 instances.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/preserve-client-ip-address.html"> Preserve client IP addresses in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.</p>
       description: A complex type for an endpoint. Each endpoint group can include one or more endpoints, such as load balancers.
-    ThresholdCount:
+    HealthCheckProtocol:
+      type: string
+      enum:
+      - TCP
+      - HTTP
+      - HTTPS
+    PortNumber:
       type: integer
       minimum: 1
-      maximum: 10
-  parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
+      maximum: 65535
+    AcceleratorNotFoundException: {}
+    GenericString:
+      type: string
+      maxLength: 255
+    IdempotencyToken:
+      type: string
+      maxLength: 255
   securitySchemes:
     hmac:
       type: apiKey
