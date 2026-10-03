@@ -6,9 +6,7 @@
   "outputs": [
     "amazon-global-accelerator-aws-global-accelerator-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 49 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -64,58 +62,9 @@
     "amazon-global-accelerator-openapi.yml: tagged paths POST /#X-Amz-Target=GlobalAccelerator_V20180706.UpdateListener -> AWS Global Accelerator",
     "amazon-global-accelerator-openapi.yml: tagged paths POST /#X-Amz-Target=GlobalAccelerator_V20180706.WithdrawByoipCidr -> AWS Global Accelerator",
     "amazon-global-accelerator-openapi.yml: declared missing tag: AWS Global Accelerator",
-    "superseded outputs removed: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints-api-openapi.yml, amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addendpoints-api-openapi.yml, amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr-api-openapi.yml, amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic-api-openapi.yml, amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createaccelerator-api-openapi.yml \u2026",
-    "apis.yml register: written (+1 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addcustomroutingendpoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-addendpoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-advertisebyoipcidr-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-allowcustomroutingtraffic-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutinglistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createendpointgroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createlistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutingendpointgroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletecustomroutinglistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deleteendpointgroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deletelistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-denycustomroutingtraffic-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-deprovisionbyoipcidr-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeacceleratorattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingacceleratorattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutingendpointgroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describecustomroutinglistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describeendpointgroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-describelistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listaccelerators-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listbyoipcidrs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingaccelerators-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingendpointgroups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutinglisteners-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listcustomroutingportmappingsbydestination-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listendpointgroups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listlisteners-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-listtagsforresource-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-provisionbyoipcidr-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removecustomroutingendpoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-removeendpoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-tagresource-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-untagresource-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateacceleratorattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingaccelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutingacceleratorattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatecustomroutinglistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateendpointgroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updatelistener-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-withdrawbyoipcidr-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "amazon-global-accelerator-aws-global-accelerator-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
