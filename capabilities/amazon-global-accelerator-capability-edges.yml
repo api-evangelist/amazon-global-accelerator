@@ -3,6 +3,7 @@ provider: Amazon Global Accelerator
 generated_by: planning/capability-mapping/scripts/classify_capabilities.py
 model: claude-opus-5
 frame:
+- Software & Technology
 - Telecommunications
 min_confidence: 0.7
 capability_model:
@@ -11,7 +12,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 46
+edge_count: 47
 edges:
 - tag: '#X Amz Target=GlobalAccelerator V20180706.UpdateAccelerator'
   spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-updateaccelerator-api-openapi.yml
@@ -23,6 +24,17 @@ edges:
     IpAddressType, IpSet, AcceleratorStatus'
   reason: Updates a cloud networking construct (static IP accelerator) — management of cloud/network infrastructure
     resources (BC-600.50).
+- tag: AWS Global Accelerator
+  spec_file: amazon-global-accelerator-aws-global-accelerator-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: '"CreateAccelerator", "CreateListener", "CreateEndpointGroup", "AdvertiseByoipCidr"; schemas
+    "HealthCheckProtocol", "IpAddressType"'
+  reason: Operations configure network entry points, listeners, endpoint groups and IP CIDR advertisement
+    — network infrastructure provisioning, which maps to IT Infrastructure Management (compute, storage,
+    network, cloud).
 - tag: '#X Amz Target=GlobalAccelerator V20180706.CreateCustomRoutingEndpointGroup'
   spec_file: amazon-global-accelerator-x-amz-target-globalaccelerator-v20180706-createcustomroutingendpointgroup-api-openapi.yml
   capability_id: BC-600.50
