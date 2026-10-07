@@ -73,6 +73,8 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
 common:
+- type: Pricing
+  url: https://aws.amazon.com/global-accelerator/pricing/
 - type: Plans
   url: plans/amazon-global-accelerator-plans-pricing.yml
 - type: Website
