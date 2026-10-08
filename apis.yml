@@ -73,6 +73,10 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-global-accelerator-context.jsonld
 common:
+- type: RateLimits
+  url: rate-limits/amazon-global-accelerator-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-global-accelerator-finops.yml
 - type: Pricing
   url: https://aws.amazon.com/global-accelerator/pricing/
 - type: Plans
