@@ -63,3 +63,68 @@ plans:
   currency: USD
   period: per-use
   unit: GB
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  units:
+  - compute
+  - data
+  plans:
+  - name: Accelerator fixed fee
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: 'DT-Premium: United States & Canada to United States, Mexico, Canada'
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: 'DT-Premium: United States & Canada to Asia Pacific'
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: 'DT-Premium: United States & Canada to Australia & New Zealand'
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: 'DT-Premium: Asia Pacific to Asia Pacific'
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: 'DT-Premium: India to United States'
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: 'DT-Premium: South Africa to South Africa, Kenya & Nigeria'
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
